@@ -1,69 +1,18 @@
 // Copyright (c) 2020 Razeware LLC
-//
-// Permission is hereby granted, free of charge, to any person
-// obtaining a copy of this software and associated documentation
-// files (the "Software"), to deal in the Software without
-// restriction, including without limitation the rights to use,
-// copy, modify, merge, publish, distribute, sublicense, and/or
-// sell copies of the Software, and to permit persons to whom
-// the Software is furnished to do so, subject to the following
-// conditions:
-//
-// The above copyright notice and this permission notice shall be
-// included in all copies or substantial portions of the Software.
-//
-// Notwithstanding the foregoing, you may not use, copy, modify,
-// merge, publish, distribute, sublicense, create a derivative work,
-// and/or sell copies of the Software in any work that is designed,
-// intended, or marketed for pedagogical or instructional purposes
-// related to programming, coding, application development, or
-// information technology. Permission for such use, copying,
-// modification, merger, publication, distribution, sublicensing,
-// creation of derivative works, or sale is expressly withheld.
-//
-// This project and source code may use libraries or frameworks
-// that are released under various Open-Source licenses. Use of
-// those libraries and frameworks are governed by their own
-// individual licenses.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-// HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-// WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
+// For full license & permission details, see LICENSE.
 
-// If you get the error "Target of URI doesn't exist", make sure you have 
+// If you get the error "Target of URI doesn't exist", make sure you have
 // run `pub get`. Then restart VS Code.
 import 'package:characters/characters.dart';
 
 void main() {
-  // Type conversion mini-exercise 1
-  const age1 = 42;
-  const age2 = 21;
+  /// Challenge 1: Teacher's grading
+  ///
+  /// You're a teacher and in your class attendance is worth 20% of the grade,
+  /// the homework is worth 30% and the exam is worth 50%. Your student got 90
+  /// points for her attendance, 80 points for her homework and 94 points on
+  /// her exam. Calculate her grade as an integer percentage rounded down.
 
-  // Type conversion mini-exercise 2
-  const average = (age1 + age2) / 2;
-  print(average);
-  // `average` is a `double` because any time you divide in Dart, the
-  // result is a `double`. Division can result in non-integer answers, so
-  // making the result an `int` could cause a loss of precision.
-
-  // Strings mini-exercise 1
-  const firstName = 'Ray';
-  const lastName = 'Wenderlich';
-
-  // Strings mini-exercise 2
-  const fullName = firstName + ' ' + lastName;
-  print(fullName);
-
-  // Strings mini-exercise 3
-  const myDetails = 'Hello, my name is $firstName $lastName.';
-  print(myDetails);
-
-  // Challenge 1
   const attendance = 90;
   const homework = 80;
   const exam = 94;
@@ -71,14 +20,40 @@ void main() {
   final integerGrade = rawGrade.toInt();
   print(integerGrade);
 
-  // Challenge 2
+  /// Challenge 2: Same same, but different
+  ///
+  /// This string has two flags that look the same. But they aren't! One of
+  /// them is the flag of Chad and the other is the flag of Romania.
+  ///
+  /// ```
+  /// const twoCountries = '🇹🇩🇷🇴';
+  /// ```
+  ///
+  /// Which is which?
+  ///
+  /// **Hint**: Romania's regional indicator sequence is `RO`, and `R` is
+  /// `127479` in decimal. Chad, which is _Tishād_ in Arabic and _Tchad_ in
+  /// French, has a regional indicator sequence of `TD`. Sequence letter `T`
+  /// is `127481` in decimal.
+
   const twoCountries = '🇹🇩🇷🇴';
   print(twoCountries.runes);
   // (127481, 127465, 127479, 127476)
   // 127481 is T (127465 is D) so the first flag is Chad.
   // 127479 is R (127476 is O) so the second flag is Romania.
 
-  // Challenge 3
+  /// Challenge 3: How many?
+  ///
+  /// Given the following string:
+  ///
+  /// ```
+  /// const vote = 'Thumbs up! 👍🏿';
+  /// ```
+  ///
+  /// How many UTF-16 code units are there?
+  /// How many Unicode code points are there?
+  /// How many Unicode grapheme clusters are there?
+
   const vote = 'Thumbs up! 👍🏿';
   print(vote.codeUnits.length); // 15
   // There are 15 code units.
@@ -89,20 +64,40 @@ void main() {
   // See pubspec.yaml for the characters package dependency.
   // See the top of this file for the characters package import.
 
-  // Challenge 4
+  /// Challenge 4: Find the error
+  ///
+  /// What is wrong with the following code?
+  ///
+  /// ```
+  /// const name = 'Ray';
+  /// name += ' Wenderlich';
+  /// ```
+
   var name = 'Ray';
   name += ' Wenderlich';
   print(name);
   // `const` variables can't be changed, so you need to use `var`.
 
-  // Challenge 5
+  /// Challenge 5: What is the type of `value`?
+  ///
+  /// ```
+  /// const value = 10 / 2;
+  /// ```
+
   const value = 10 / 2;
   print(value); // 5.0
   // `value` is a `double`.
   // Division always produces a double in Dart.
   // You can see the type by hovering your mouse pointer over `value`.
 
-  // Challenge 6
+  /// Challenge 6: What is the value of `summary`?
+  ///
+  /// ```
+  /// const number = 10;
+  /// const multiplier = 5;
+  /// final summary = '$number \u00D7 $multiplier = ${number * multiplier}';
+  /// ```
+
   const number = 10;
   const multiplier = 5;
   final summary = '$number \u00D7 $multiplier = ${number * multiplier}';

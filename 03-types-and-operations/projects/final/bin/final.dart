@@ -1,46 +1,12 @@
 // Copyright (c) 2020 Razeware LLC
-//
-// Permission is hereby granted, free of charge, to any person
-// obtaining a copy of this software and associated documentation
-// files (the "Software"), to deal in the Software without
-// restriction, including without limitation the rights to use,
-// copy, modify, merge, publish, distribute, sublicense, and/or
-// sell copies of the Software, and to permit persons to whom
-// the Software is furnished to do so, subject to the following
-// conditions:
-//
-// The above copyright notice and this permission notice shall be
-// included in all copies or substantial portions of the Software.
-//
-// Notwithstanding the foregoing, you may not use, copy, modify,
-// merge, publish, distribute, sublicense, create a derivative work,
-// and/or sell copies of the Software in any work that is designed,
-// intended, or marketed for pedagogical or instructional purposes
-// related to programming, coding, application development, or
-// information technology. Permission for such use, copying,
-// modification, merger, publication, distribution, sublicensing,
-// creation of derivative works, or sale is expressly withheld.
-//
-// This project and source code may use libraries or frameworks
-// that are released under various Open-Source licenses. Use of
-// those libraries and frameworks are governed by their own
-// individual licenses.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-// HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-// WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
+// For full license & permission details, see LICENSE.
 
 // If you get the error "Target of URI doesn't exist", make sure you have 
 // run `pub get`. Then restart VS Code.
 import 'package:characters/characters.dart';
 
 void main() {
-  // Type conversion
+  /// Type conversion
 
   var integer = 100;
   var decimal = 12.5;
@@ -48,7 +14,7 @@ void main() {
   integer = decimal.toInt();
   print(integer);
 
-  // Operators with mixed types
+  /// Operators with mixed types
 
   const hourlyRate = 19.5;
   const hoursWorked = 10;
@@ -57,7 +23,7 @@ void main() {
   final totalCost = (hourlyRate * hoursWorked).toInt();
   print(totalCost);
 
-  // Type inference
+  /// Type inference
 
   // int myInteger = 10;
   // double myDouble = 3.14;
@@ -73,14 +39,14 @@ void main() {
   const double actuallyDouble = 3;
   const wantADouble = 3.0;
 
-  // Strings and characters
+  /// Strings and characters
 
   print('Hello, Dart!');
   var greeting = 'Hello, Dart!';
   greeting = 'Hello, Flutter!';
   print(greeting);
 
-  // Getting characters
+  /// Getting characters
 
   const letter = 'a';
 
@@ -91,7 +57,7 @@ void main() {
   print(dart.codeUnits);
   print(dart.runes);
 
-  // Unicode grapheme clusters
+  /// Unicode grapheme clusters
 
   const flag = '🇲🇳';
   print(flag.runes);
@@ -104,14 +70,14 @@ void main() {
   print(family.runes.length);
   print(family.characters.length);
 
-  // Single-quotes vs double-quotes
+  /// Single-quotes vs double-quotes
 
   print('I like cats');
   print("I like cats");
   print("my cat's food");
   print('my cat\'s food');
 
-  // Concatenation
+  /// Concatenation
 
   // var message = 'Hello' + ' my name is ';
   // const name = 'Ray';
@@ -125,7 +91,7 @@ void main() {
   message.toString();
   print(message);
 
-  // Interpolation
+  /// Interpolation
 
   const name = 'Ray';
   const introduction = 'Hello my name is $name';
@@ -136,7 +102,7 @@ void main() {
   final sentence = 'One third is ${oneThird.toStringAsFixed(3)}.';
   print(sentence);
 
-  // Multi-line strings
+  /// Multi-line strings
 
   const bigString = '''
 You can have a string 
@@ -159,12 +125,12 @@ doing this.''';
   const rawString = r'My name \n is $name.';
   print(rawString);
 
-  // Inserting characters from their codes
+  /// Inserting characters from their codes
 
   print('I \u2764 Dart\u0021');
   print('I love \u{1F3AF}');
 
-  // Object and dynamic types
+  /// Object and dynamic types
 
   // var myVariable = 42;
   // myVariable = 'hello'; // compile-time error
