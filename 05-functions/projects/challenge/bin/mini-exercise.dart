@@ -17,8 +17,8 @@ void main() {
 /// Function basics: Mini-exercise 1
 ///
 /// Write a function named `youreWonderful` with a String parameter
-/// called `name`. It returns a String using `name`, like "You're
-/// wonderful, Bob."
+/// called `name`. It returns a string using `name`, something like 
+/// "You're wonderful, Bob."
 void functionBasicsMiniExercise1() {
   String youreWonderful(String name) {
     return "You're wonderful, $name.";
