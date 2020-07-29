@@ -41,7 +41,7 @@ void main() {
   /// Challenge 1: Variables
   ///
   /// Declare a constant called `myAge` and set it equal to your age.
-  /// Also declare variable called `dogs` and set it equal to the
+  /// Also declare variable called `dogs` and set that equal to the
   /// number of dogs you own. Then imagine you bought a new puppy and increment
   /// the `dogs` variable by one.
 

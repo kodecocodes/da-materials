@@ -57,8 +57,8 @@ void main() {
   /// Naming data: Mini-exercise 2
   ///
   /// Declare a variable of type `double` called `averageAge`. Initially, set
-  /// it to your own age. Then, set it to the average of your age and your best
-  /// friend's age.
+  /// the variable to your own age. Then, set it to the average of your age and 
+  /// your best friend's age.
 
   double averageAge = 98;
   averageAge = (98 + 27) / 2;
