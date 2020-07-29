@@ -1,28 +1,11 @@
 // Copyright (c) 2020 Razeware LLC
 // For full license & permission details, see LICENSE.
 
-// If you get the error "Target of URI doesn't exist", make sure you have 
+// If you get the error "Target of URI doesn't exist", make sure you have
 // run `pub get`. Then restart VS Code.
 import 'package:characters/characters.dart';
 
 void main() {
-  /// Type conversion
-
-  var integer = 100;
-  var decimal = 12.5;
-  // integer = decimal;
-  integer = decimal.toInt();
-  print(integer);
-
-  /// Operators with mixed types
-
-  const hourlyRate = 19.5;
-  const hoursWorked = 10;
-  // const totalCost = hourlyRate * hoursWorked;
-  // const totalCost = (hourlyRate * hoursWorked).toInt();
-  final totalCost = (hourlyRate * hoursWorked).toInt();
-  print(totalCost);
-
   /// Type inference
 
   // int myInteger = 10;
@@ -34,10 +17,37 @@ void main() {
   const myInteger = 10;
   const myDouble = 3.14;
 
+  num myNumber = 3.14;
+  print(myNumber is double);
+  print(myNumber is int);
+  print(myNumber.runtimeType);
+
+  /// Type conversion
+  
+  var integer = 100;
+  var decimal = 12.5;
+  // integer = decimal;
+  integer = decimal.toInt();
+  print(integer);
+
+  const hourlyRate = 19.5;
+  const hoursWorked = 10;
+  // const totalCost = hourlyRate * hoursWorked;
+  // const totalCost = (hourlyRate * hoursWorked).toInt();
+  final totalCost = (hourlyRate * hoursWorked).toInt();
+  print(totalCost);
+
   // const wantADouble = 3;
   // final actuallyDouble = 3.toDouble();
   const double actuallyDouble = 3;
   const wantADouble = 3.0;
+
+  num someNumber = 3;
+  // print(someNumber.isEven);
+  final someInt = someNumber as int;
+  print(someInt.isEven);
+  // final someDouble = someNumber as double;
+  final someDouble = someNumber.toDouble();
 
   /// Strings and characters
 
@@ -143,5 +153,5 @@ doing this.''';
   // myVariable = 'hello'; // OK
 
   Object myVariable = 42;
-  myVariable = 'hello';    // OK
+  myVariable = 'hello'; // OK
 }

@@ -2,7 +2,7 @@
 // For full license & permission details, see LICENSE.
 
 void main() {
-  /// Type conversion: Mini-exercise 1
+  /// Data types in Dart: Mini-exercise 1
   ///
   /// Create a constant called `age1` and set it equal to `42`. Create another
   /// constant called `age2` and set it equal to `21`. Check by hovering over
@@ -12,7 +12,7 @@ void main() {
   const age1 = 42;
   const age2 = 21;
 
-  /// Type conversion: Mini-exercise 2
+  /// Data types in Dart: Mini-exercise 2
   ///
   /// Create a constant called `average` and set it equal to the average of
   /// `age1` and `age2` using the operation `(age1 + age2) / 2`. Hover over
