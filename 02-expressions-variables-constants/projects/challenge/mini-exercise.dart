@@ -17,7 +17,7 @@ void main() {
   ///
   /// Declare a constant of type `int` called `myAge` and set it to your age.
 
-  int myAge = 98;
+  const myAge = 98;
   print(myAge);
 
   /// Naming data: Mini-exercise 2

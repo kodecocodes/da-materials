@@ -32,7 +32,7 @@ void main() {
 
   /// Printing out
 
-  print("Hello, Dart Apprentice reader!");
+  print('Hello, Dart Apprentice reader!');
 
   /// Arithmetic operations
   
