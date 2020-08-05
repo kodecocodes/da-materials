@@ -14,6 +14,7 @@ void main() {
   /// Boolean operators
 
   const doesOneEqualTwo = (1 == 2);
+  // const doesOneEqualTwo = 1 == 2;
   print('doesOneEqualTwo: $doesOneEqualTwo');
 
   const doesOneNotEqualTwo = (1 != 2);
@@ -44,8 +45,13 @@ void main() {
   print('orTrue: $orTrue');
   print('orFalse: $orFalse');
 
-  const andOr = (1 < 2 && 3 > 4) || 1 < 4;
+  const andOr = 3 > 4 && (1 < 2 || 1 < 4);
   print('andOr: $andOr');
+
+  const withoutParentheses = 3 > 4 && 1 < 2 || 1 < 4;
+  const withParentheses = (3 > 4 && 1 < 2) || 1 < 4;
+  print('withoutParentheses: $withoutParentheses');
+  print('withParentheses: $withParentheses');
 
   /// String equality
 
@@ -142,6 +148,20 @@ void main() {
     print('sum: $sum');
   } while (sum < 10);
 
+  /// Comparing while and do-while loops
+
+  sum = 11;
+  while (sum < 10) {
+    sum += 4;
+  }
+  print('while loop sum: $sum');
+
+  sum = 11;
+  do {
+    sum += 4;
+  } while (sum < 10);
+  print('do-while loop sum: $sum');
+
   /// Breaking out of a loop
 
   sum = 1;
@@ -160,6 +180,7 @@ void main() {
   while (random.nextInt(6) + 1 != 6) {
     print('Not a six!');
   }
+  print('Finally, you got a six!');
 
   /// For loops
 

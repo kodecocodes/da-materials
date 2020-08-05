@@ -64,7 +64,7 @@ void main() {
 
   /// Challenge 4: Fibonacci
   ///
-  /// Calculate the _n_th Fibonacci number. Remember that Fibonacci numbers
+  /// Calculate the nth Fibonacci number. Remember that Fibonacci numbers
   /// start its sequence with 1 and 1, and then subsequent numbers in the
   /// sequence are equal to the previous two values added together. You can
   /// get a refresher here: https://en.wikipedia.org/wiki/Fibonacci_number
