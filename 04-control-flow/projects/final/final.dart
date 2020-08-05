@@ -16,6 +16,7 @@ void main() {
   const doesOneEqualTwo = (1 == 2);
   // const doesOneEqualTwo = 1 == 2;
   print('doesOneEqualTwo: $doesOneEqualTwo');
+  print(2 == 2.0);
 
   const doesOneNotEqualTwo = (1 != 2);
   print('doesOneNotEqualTwo: $doesOneNotEqualTwo');
