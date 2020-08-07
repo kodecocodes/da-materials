@@ -5,6 +5,8 @@ void main() {
 
 }
 
+/// Dart classes
+
 /// Dart classes: Mini-exercise 1
 /// 
 /// Create a class called `Password` and give it a string property 
@@ -45,3 +47,31 @@ void main() {
 //   }
 // }
 
+
+/// Constructors
+
+/// Constructors: Mini-exercise 1
+/// 
+/// Given the following class:
+/// 
+/// ```none
+/// class Password {
+///   String value = '';
+/// }
+/// ```
+/// 
+/// Make `value` a `final` variable, but not private.
+
+// class Password {
+//   final value = '';
+// }
+
+/// Constructors: Mini-exercise 2
+/// 
+/// Add a `const` constructor as the only way to initialize a 
+/// `Password` object.
+
+// class Password {
+//   const Password(this.value);
+//   final String value;
+// }
