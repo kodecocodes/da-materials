@@ -16,15 +16,15 @@ void main() {
 
 /// Function basics: Mini-exercise 1
 ///
-/// Write a function named `youreWonderful` with a String parameter
+/// Write a function named `youAreWonderful` with a String parameter
 /// called `name`. It returns a string using `name`, something like 
 /// "You're wonderful, Bob."
 void functionBasicsMiniExercise1() {
-  String youreWonderful(String name) {
+  String youAreWonderful(String name) {
     return "You're wonderful, $name.";
   }
 
-  print(youreWonderful('Bob'));
+  print(youAreWonderful('Bob'));
 }
 
 /// Function basics: Mini-exercise 2
@@ -33,11 +33,11 @@ void functionBasicsMiniExercise1() {
 /// function returns something like "You're wonderful, Bob. 10 people
 /// think so." Make both inputs named parameters.
 void functionBasicsMiniExercise2() {
-  String youreWonderful({String name, int numberPeople}) {
+  String youAreWonderful({String name, int numberPeople}) {
     return "You're wonderful, $name. $numberPeople think so.";
   }
 
-  print(youreWonderful(name: 'Bob', numberPeople: 10));
+  print(youAreWonderful(name: 'Bob', numberPeople: 10));
 }
 
 /// Function basics: Mini-exercise 3
@@ -46,19 +46,19 @@ void functionBasicsMiniExercise2() {
 void functionBasicsMiniExercise3() {
   // Remember to add the meta package to pubspec.yaml.
   // Also import 'package:meta/meta.dart';
-  String youreWonderful({
+  String youAreWonderful({
     @required String name,
     int numberPeople = 30,
   }) {
     return "You're wonderful, $name. $numberPeople think so.";
   }
 
-  print(youreWonderful(name: 'Mary'));
+  print(youAreWonderful(name: 'Mary'));
 }
 
 /// Anonymous functions: Mini-exercise 1
 ///
-/// Change the `youreWonderful()` function in the first mini-exercise
+/// Change the `youAreWonderful()` function in the first mini-exercise
 /// of this chapter into an anonymous function. Assign it to a variable
 /// called `wonderful`.
 void anonymousFunctionsMiniExercise1() {
