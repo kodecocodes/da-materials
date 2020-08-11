@@ -63,8 +63,11 @@ void challenge3() {
     User(3, 'Pablo'),
   ];
 
-  List<Map<String, dynamic>> usersToMapList(List<User> users) {
-    final userMapList = <Map<String, dynamic>>[];
+  // Note: You'll find many APIs use `dynamic` instead of `Object` when 
+  // converting a custom object to a map. Either one works, though using 
+  // `Object` when possible allows you to keep type safety.
+  List<Map<String, Object>> usersToMapList(List<User> users) {
+    final userMapList = <Map<String, Object>>[];
     for (var user in users) {
       final userMap = {
         'id': user.id,

@@ -60,7 +60,7 @@ void growableLists() {
   print(desserts.length);
 
   desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
-  desserts.add('croissant');
+  desserts.add('croissants');
   print(desserts.length);
 
   desserts.remove('cupcakes');
@@ -169,7 +169,7 @@ void filteringList() {
   print(evens);
 
   const desserts = ['cookies', 'cake', 'donuts', 'pie'];
-  final dessert = desserts.firstWhere((myString) => myString.length < 5);
+  final dessert = desserts.firstWhere((word) => word.length < 5);
   print(dessert);
 }
 
@@ -295,13 +295,15 @@ void operationsOnMaps() {
     'donuts': 37,
     'cookies': 141,
   };
-  print(inventory['cakes']);
+
+  final numberOfCakes = inventory['cakes'];
+  print(numberOfCakes);
 
   inventory['brownies'] = 3;
   print(inventory);
 
   inventory['cakes'] = 1;
-  print(inventory['cakes']);
+  print(inventory);
 
   inventory.remove('cookies');
   print(inventory);

@@ -42,7 +42,8 @@ void listsMiniExercise1() {
 void listsMiniExercise2() {
   /// Lists: Mini-exercise 2
   ///
-  /// Accomplish the same thing as in Mini-exercise 1 using a growable list.
+  /// Accomplish the same thing as in Mini-exercise 1 using a growable list 
+  /// and the `add` method.
 
   final months = <String>[];
   months.add('January');
@@ -85,8 +86,8 @@ void listsMiniExercise3() {
 void listsMiniExercise4() {
   /// Lists: Mini-exercise 4
   ///
-  /// Use a collection `for` to create a new list with the month names in 
-  /// all uppercase letters.
+  /// Use collection `for` to create a new list with the month names in 
+  /// all uppercase.
   
   const months = [
     'January',
