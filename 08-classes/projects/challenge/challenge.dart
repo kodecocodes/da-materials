@@ -8,8 +8,8 @@ void main() {
   /// `String` properties and a variable `grade` as an `int` property.
   /// Add a constructor to the class that initializes all the properties.
   /// Add a method to the class that nicely formats a `Student` for printing.
-  /// Use the class to create students `ernie` and `bert` with A (95) and
-  /// B (85) grades, respectively.
+  /// Use the class to create students `bert` and `ernie` with grades of 95 and
+  /// 85, respectively.
 
   final ernie = Student('Ernie', 'Henson', 95);
   final bert = Student('Bert', 'Oz', 85);
@@ -21,7 +21,7 @@ void main() {
   /// length `radius` as a named parameter. Add getters for the the volume and
   /// surface area but none for the radius. Don't use the `dart:math` package
   /// but store your own version of `pi` as a `static` constant. Use your class
-  /// to find the volume and surface area of a sphere with a radius of 12 cm.
+  /// to find the volume and surface area of a sphere with a radius of 12.
   
   const sphere = Sphere(radius: 12);
   final volume = sphere.volume;
