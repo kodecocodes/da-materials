@@ -76,12 +76,12 @@ void main() {
 
   /// Type safety
   int myInteger = 10;
-  //myInteger = 3.14159; // No, no, no. That not allowed.
+  // myInteger = 3.14159; // No, no, no. That not allowed.
 
   num myNumber;
   myNumber = 10;      // OK
   myNumber = 3.14159; // OK
-  //myNumber = 'ten'; // No, no, no.
+  // myNumber = 'ten'; // No, no, no.
 
   dynamic myVariable;
   myVariable = 10;      // OK
@@ -91,14 +91,14 @@ void main() {
   /// Type inference
   var someNumber = 10;
   someNumber = 15; // OK
-  //someNumber = 3.14159; // No, no, no.
+  // someNumber = 3.14159; // No, no, no.
 
   /// Constants
-  const myConstant = 10;
-  //myConstant = 0; // Not allowed.
+  // const myConstant = 10;
+  // myConstant = 0; // Not allowed.
 
-  //final myConstant = userAge;
-  //myConstant = 0; // Not allowed.
+  final hoursSinceMidnight = DateTime.now().hour;
+  // hoursSinceMidnight = 0; // Not allowed.
 
   /// Increment and decrement
   var counter = 0;
