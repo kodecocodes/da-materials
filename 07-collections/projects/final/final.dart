@@ -3,21 +3,13 @@
 
 void main() {
   /// Lists
-  fixedLengthLists();
-  growableLists();
+  basicListOperations();
   mutableAndImmutableLists();
+  listProperties();
+  spreadOperator();
   collectionIf();
   collectionFor();
-  propertiesOfLists();
   loopingOverElementsOfList();
-
-  /// Operations on a list
-  spreadOperator();
-  mappingOverList();
-  filteringList();
-  sortingList();
-  reducingList();
-  combiningHigherOrderMethods();
 
   /// Sets
   creatingSets();
@@ -31,75 +23,80 @@ void main() {
   propertiesOfMaps();
   checkingForKeyValueExistence();
   loopingOverElementsOfMap();
+
+  /// Higher order methods
+  mappingOverList();
+  filteringList();
+  sortingList();
+  combiningHigherOrderMethods();
 }
 
-void fixedLengthLists() {
-  final pastries = List<String>(4);
-  pastries[0] = 'cookies';
-  pastries[1] = 'cupcakes';
-  pastries[2] = 'donuts';
-  pastries[3] = 'pie';
-
-  final index = pastries.indexOf('pie');
-  final value = pastries[index];
-  print('index: $index, value: $value');
-
-  print(pastries);
-  print(pastries[1]);
-
-  // pastries.add('croissant');
-}
-
-void growableLists() {
-  // var desserts = List<String>();
-  // var desserts = [];
-  var desserts = <String>[];
-  print(desserts.length);
-
-  desserts.add('brownies');
-  print(desserts.length);
-
+void basicListOperations() {
+  var desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
+  desserts = [];
+  // var snacks = [];
+  // List<String> snacks = [];
+  var snacks = <String>[];
   desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
-  desserts.add('croissants');
-  print(desserts.length);
-
-  desserts.remove('cupcakes');
+  print(desserts);
+  final secondElement = desserts[1];
+  print(secondElement);
+  final index = desserts.indexOf('pie');
+  final value = desserts[index];
+  print(index);
+  print(value);
+  desserts[1] = 'cake';
+  print(desserts);
+  desserts.add('brownies');
+  print(desserts);
+  desserts.remove('cake');
   print(desserts);
 }
 
 void mutableAndImmutableLists() {
-  final pastries = List<String>(4);
-  pastries[0] = 'cookies';
-  pastries[1] = 'cupcakes';
-  pastries[2] = 'donuts';
-  pastries[3] = 'pie';
-
-  print(pastries[1]);
-  pastries[1] = 'cake';
-  print(pastries[1]);
-
-  // var desserts = <String>[];
-  // desserts.add('brownies');
+  // var desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
+  // desserts = [];
   // desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
 
-  final desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
+  // final desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
   // desserts = [];
   // desserts = ['cake', 'ice cream'];
   // desserts = someOtherList;
-  desserts.remove('cookies');
-  desserts.remove('cupcakes');
-  desserts.add('ice cream');
+
+  // final desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
+  // desserts.remove('cookies');
+  // desserts.remove('cupcakes');
+  // desserts.add('ice cream');
 
   // const desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
   // desserts.add('brownie');
   // desserts.remove('pie');
   // desserts[0] = 'fudge';
 
-  // final desserts = const ['cookies', 'cupcakes', 'donuts', 'pie'];
-
+  final desserts = const ['cookies', 'cupcakes', 'donuts', 'pie'];
   final modifiableList = [DateTime.now(), DateTime.now()];
   final unmodifiableList = List.unmodifiable(modifiableList);
-  print(unmodifiableList);
+}
+
+void listProperties() {
+  const drinks = ['water', 'milk', 'juice', 'soda'];
+  print(drinks.first);
+  print(drinks.last);
+  print(drinks.isEmpty);
+  print(drinks.isNotEmpty);
+  print(drinks.length == 0);
+  print(drinks.length > 0);
+}
+
+void spreadOperator() {
+  const pastries = ['cookies', 'croissants'];
+  const candy = ['Junior Mints', 'Twizzlers', 'M&Ms'];
+  const desserts = ['donuts', ...pastries, ...candy];
+  print(desserts);
+
+  List<String> coffees;
+  final hotDrinks = ['green tea', ...?coffees];
+  print(hotDrinks);
 }
 
 void collectionIf() {
@@ -122,19 +119,6 @@ void collectionFor() {
   print(bigDeserts);
 }
 
-void propertiesOfLists() {
-  const desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
-
-  print(desserts.first);
-  print(desserts.last);
-
-  print(desserts.isEmpty);
-  print(desserts.isNotEmpty);
-
-  print(desserts.length == 0);
-  print(desserts.length != 0);
-}
-
 void loopingOverElementsOfList() {
   const desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
   for (var dessert in desserts) {
@@ -144,71 +128,8 @@ void loopingOverElementsOfList() {
   desserts.forEach(print);
 }
 
-void spreadOperator() {
-  const pastries = ['cookies', 'croissants'];
-  const candy = ['Junior Mints', 'Twizzlers', 'M&Ms'];
-  const desserts = ['donuts', ...pastries, ...candy];
-  print(desserts);
-
-  List<String> coffees;
-  final hotDrinks = ['green tea', ...?coffees];
-  print(hotDrinks);
-}
-
-void mappingOverList() {
-  const numbers = [1, 2, 3, 4];
-  // final squares = numbers.map((number) => number * number);
-  final squares = numbers.map((number) => number * number).toList();
-  print(squares);
-}
-
-void filteringList() {
-  const numbers = [1, 2, 3, 4];
-  final squares = numbers.map((number) => number * number).toList();
-  final evens = squares.where((square) => square.isEven);
-  print(evens);
-
-  const desserts = ['cookies', 'cake', 'donuts', 'pie'];
-  final dessert = desserts.firstWhere((word) => word.length < 5);
-  print(dessert);
-}
-
-void sortingList() {
-  final desserts = ['cookies', 'pie', 'donuts', 'brownies'];
-  desserts.sort();
-  print(desserts);
-
-  const constantList = ['cookies', 'pie', 'donuts', 'brownies'];
-  // constantList.sort();
-
-  var dessertsReversed = desserts.reversed;
-  print(dessertsReversed);
-
-  // final desserts = ['cookies', 'pie', 'donuts', 'brownies'];
-  // final dessertsReversed = desserts.reversed;
-  // print(desserts);
-  // print(dessertsReversed);
-
-  desserts.sort((d1, d2) => d1.length.compareTo(d2.length));
-  print(desserts);
-}
-
-void reducingList() {
-  const amounts = [199, 299, 299, 199, 499];
-  final total = amounts.reduce((sum, element) => sum + element);
-  print(total);
-}
-
-void combiningHigherOrderMethods() {
-  const desserts = ['cake', 'pie', 'donuts', 'brownies'];
-  final bigTallDesserts = desserts
-      .where((dessert) => dessert.length > 5)
-      .map((dessert) => dessert.toUpperCase());
-  print(bigTallDesserts);
-}
-
 void creatingSets() {
-  // final someSet = Set<int>();
+  // final Set<int> someSet = {};
   final someSet = <int>{};
   final anotherSet = {1, 2, 3, 1};
   print(anotherSet);
@@ -244,11 +165,11 @@ void intersectionsAndUnions() {
 }
 
 void creatingEmptyMaps() {
-  // final emptyMap = Map<String, int>();
+  // final Map<String, int> emptyMap = {};
   final emptyMap = <String, int>{};
-  print(emptyMap.length);
   final emptySomething = {};
   final mySet = <String>{};
+  print(emptyMap.length);
 }
 
 void initializingMapWithValues() {
@@ -336,4 +257,54 @@ void loopingOverElementsOfMap() {
   }
 
   inventory.forEach((key, value) => print('$key -> $value'));
+
+  for (final entry in inventory.entries) {
+    print('${entry.key} -> ${entry.value}');
+  }
+}
+
+void mappingOverList() {
+  const numbers = [1, 2, 3, 4];
+  final squares = numbers.map((number) => number * number);
+  print(squares);
+  print(squares.toList());
+}
+
+void filteringList() {
+  const numbers = [1, 2, 3, 4];
+  final squares = numbers.map((number) => number * number);
+  final evens = squares.where((square) => square.isEven);
+  print(evens);
+
+  const desserts = ['cookies', 'cake', 'donuts', 'pie'];
+  final dessert = desserts.firstWhere((word) => word.length < 5);
+  print(dessert);
+}
+
+void sortingList() {
+  final desserts = ['cookies', 'pie', 'donuts', 'brownies'];
+  desserts.sort();
+  print(desserts);
+
+  const constantList = ['cookies', 'pie', 'donuts', 'brownies'];
+  // constantList.sort();
+
+  var dessertsReversed = desserts.reversed;
+  print(dessertsReversed);
+
+  // final desserts = ['cookies', 'pie', 'donuts', 'brownies'];
+  // final dessertsReversed = desserts.reversed;
+  // print(desserts);
+  // print(dessertsReversed);
+
+  desserts.sort((d1, d2) => d1.length.compareTo(d2.length));
+  print(desserts);
+}
+
+void combiningHigherOrderMethods() {
+  const desserts = ['cake', 'pie', 'donuts', 'brownies'];
+  final bigTallDesserts = desserts
+      .where((dessert) => dessert.length > 5)
+      .map((dessert) => dessert.toUpperCase());
+  print(bigTallDesserts);
 }
