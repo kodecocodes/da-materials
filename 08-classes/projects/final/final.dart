@@ -48,9 +48,9 @@ void main() {
 
   /// Static members
 
-  // final value = MyClass.myProperty;
-  // MyClass.myMethod();
-  // final mySingleton = MySingleton.instance;
+  final value = MyClass.myProperty;
+  MyClass.myMethod();
+  final mySingleton = MySingleton.instance;
   // final user = User.fromJson('{"id":42,"name":"Ray"}');
 }
 
