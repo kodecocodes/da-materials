@@ -59,7 +59,7 @@ void ifNullOperator() {
   String message;
   var text = message ?? 'Error';
   print(text);
-  message = "Greetings!";
+  message = 'Greetings!';
   text = message ?? 'Error';
   print(text);
 
