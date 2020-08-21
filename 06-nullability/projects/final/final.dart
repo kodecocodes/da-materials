@@ -160,6 +160,7 @@ void typePromotion() {
 void moreNullAwareOperators() {
   // String? nullableGreeting = 'hello';
   // String nonNullableGreeting = nullableGreeting!;
+  // String nonNullableGreeting = nullableGreeting as String;
 
   // bool? isBeautiful(String? item) {
   //   if (item == 'flower') {
