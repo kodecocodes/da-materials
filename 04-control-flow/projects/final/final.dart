@@ -114,19 +114,17 @@ void main() {
 
   /// The ternary conditional operator
 
-  const a = 5;
-  const b = 10;
-
-  int min;
-  if (a < b) {
-    min = a;
+  const score = 83;
+  String message;
+  if (score >= 60) {
+    message = 'You passed';
   } else {
-    min = b;
+    message = 'You failed';
   }
-  print('min: $min');
+  print('message: $message');
 
-  min = (a < b) ? a : b;
-  print('min: $min');
+  message = (score >= 60) ? 'You passed' : 'You failed';
+  print('message: $message');
 
   /// While loops
 
