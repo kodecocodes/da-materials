@@ -107,7 +107,7 @@ void nonNullableByDefault() {
 }
 
 void initializingNonNullableClassFields() {
-  // final user = User(null);
+  // final user = User(name: null);
 }
 // class User {
 //   String name;
@@ -159,8 +159,9 @@ void typePromotion() {
 
 void moreNullAwareOperators() {
   // String? nullableGreeting = 'hello';
-  // String nonNullableGreeting = nullableGreeting!;
+  // //String nonNullableGreeting = nullableGreeting!;
   // String nonNullableGreeting = nullableGreeting as String;
+  // print(nonNullableGreeting);
 
   // bool? isBeautiful(String? item) {
   //   if (item == 'flower') {
@@ -170,20 +171,23 @@ void moreNullAwareOperators() {
   //   }
   //   return null;
   // }
-  // bool flowerIsBeautiful = isBeautiful('flower');
+  // //bool flowerIsBeautiful = isBeautiful('flower');
   // bool flowerIsBeautiful = isBeautiful('flower')!;
+  // print(flowerIsBeautiful);
 
-  // User user = User()
-  //   ..name = 'Ray'
-  //   ..id = 42;
+  // // User user = User()
+  // //   ..name = 'Ray'
+  // //   ..id = 42;
   // User? user = User();
   // user
   //   ?..name = 'Ray'
   //   ..id = 42;
   // String? lengthString = user?.name?.length.toString();
+  // print(lengthString);
 
   // List<int>? myList = [1, 2, 3];
   // int? myItem = myList?[0];
+  // print(myItem);
 }
 // class User {
 //   String? name;
@@ -191,6 +195,10 @@ void moreNullAwareOperators() {
 // }
 
 void lateKeyword() {
+  // final user = User('Ray');
+  // print(user.name);
+  // print(user._secretNumber);
+
   // final user = User();
   // print(user.name);
 }
