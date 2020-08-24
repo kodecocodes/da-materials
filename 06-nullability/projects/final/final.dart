@@ -146,7 +146,8 @@ void handlingNullableValues() {
 }
 
 void typePromotion() {
-  // String? name = 'Ray';
+  // String? name;
+  // name = 'Ray';
   // print(name.length);
 
   // String myMethod(int? myParameter) {
