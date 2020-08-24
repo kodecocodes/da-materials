@@ -10,11 +10,21 @@ class User {
 
   const User.anonymous() : this();
 
-  // static User fromJson(String json) {
-  //   // extract userId and userName from json
-  //   // ...
+  // factory User.fromJson(Map<String, Object> json) {
+  //   final userId = json['id'];
+  //   final userName = json['name'];
   //   return User(id: userId, name: userName);
   // }
+
+  // static User fromJson(Map<String, Object> json) {
+  //   final userId = json['id'];
+  //   final userName = json['name'];
+  //   return User(id: userId, name: userName);
+  // }
+
+  User.fromJson(Map<String, Object> json)
+    : id = json['id'],
+      name = json['name'];
 
   final String name;
   final int id;
