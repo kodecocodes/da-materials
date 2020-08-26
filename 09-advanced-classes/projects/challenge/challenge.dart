@@ -11,7 +11,7 @@ void challenge1() {
   /// Challenge 1: Heavy monotremes
   ///
   /// Dart has a class named `Comparable` which the `sort` method of a list
-  /// uses to sort the elements. Add a `weight` field to the `Platypus` class
+  /// uses to sort its elements. Add a `weight` field to the `Platypus` class
   /// you made in this lesson. Then make `Platypus` implement `Comparable`
   /// so that when you have a list of `Platypus` objects, calling sort on the
   /// list will sort them by weight.

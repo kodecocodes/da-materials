@@ -83,7 +83,7 @@ void interfacesMiniExercises() {
   /// 1. Create an interface called `Bottle` and add a method to it 
   ///    called `open`.
   /// 2. Create a concrete class called `SodaBottle` that implements 
-  ///    `Bottle` and prints "Fizz fizz" when open is called.
+  ///    `Bottle` and prints "Fizz fizz" when `open` is called.
   /// 3. Add a factory constructor to `Bottle` that returns a `SodaBottle` 
   ///    instance.
   /// 4. Instantiate `SodaBottle` by using the `Bottle` factory constructor 
