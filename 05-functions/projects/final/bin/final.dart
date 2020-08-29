@@ -37,37 +37,22 @@ void main() {
 }
 
 void anatomyOfDartFunction() {
-  String complement(int number) {
+  String compliment(int number) {
     return '$number is a very nice number.';
   }
 
   const input = 12;
-  final output = complement(input);
+  final output = compliment(input);
   print(output);
 }
 
 void usingMultipleParameters() {
-  void hello() {
-    print('Hello!');
+  void helloPersonAndPet(String member, String pet) {
+    print('Hello, $member, and your furry friend, $pet!');
   }
 
-  void helloPerson(String name) {
-    print('Hello, $name!');
-  }
-
-  void helloPair(String firstPerson, String secondPerson) {
-    print('Hello, $firstPerson and $secondPerson!');
-  }
-
-  void helloGroup(String member1, String member2, String member3) {
-    print('Hello, $member1, $member2 and $member3!');
-  }
-
-  hello();
-  helloPerson('Jonathan');
-  helloPair('Ray', 'Vicki');
-  helloGroup('Manda', 'Brian', 'JB');
-  //helloPerson();
+  helloPersonAndPet('Fluffy', 'Chris');
+  // helloPersonAndPet();
 }
 
 void makingParametersOptional() {
@@ -148,15 +133,15 @@ void avoidingSideEffects() {
 }
 
 void optionalTypes() {
-  // String complement(int number) {
+  // String compliment(int number) {
   //   return '$number is a very nice number.';
   // }
 
-  // complement(number) {
+  // compliment(number) {
   //   return '$number is a very nice number.';
   // }
 
-  dynamic complement(dynamic number) {
+  dynamic compliment(dynamic number) {
     return '$number is a very nice number.';
   }
 }
