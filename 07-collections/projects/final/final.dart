@@ -27,6 +27,7 @@ void main() {
   /// Higher order methods
   mappingOverList();
   filteringList();
+  consolidatingList();
   sortingList();
   combiningHigherOrderMethods();
 }
@@ -279,6 +280,13 @@ void filteringList() {
   const desserts = ['cookies', 'cake', 'donuts', 'pie'];
   final dessert = desserts.firstWhere((word) => word.length < 5);
   print(dessert);
+}
+
+void consolidatingList() {
+  const amounts = [199, 299, 299, 199, 499];
+  final total = amounts.reduce((sum, element) => sum + element);
+  // final total = amounts.fold(0, (sum, element) => sum + element);
+  print(total);
 }
 
 void sortingList() {
