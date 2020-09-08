@@ -12,7 +12,7 @@ Future<void> main() async {
   /// will be easier to follow if you only uncomment the method you want to
   /// examine.
 
-  //concurrencyInDart();
+  concurrencyInDart();
 
   //futureType();
   //gettingResultWithCallbacks();
@@ -28,7 +28,7 @@ Future<void> main() async {
   //await transformingStream();
 
   //appStoppingSynchronousCode();
-  await appStoppingAsynchronousCode();
+  //await appStoppingAsynchronousCode();
 }
 
 void concurrencyInDart() {
@@ -62,10 +62,10 @@ void gettingResultWithCallbacks() {
         (value) => print('Value: $value'),
       )
       .catchError(
-        (error) => print('Error: $error'),
+        (error) => print(error),
       )
       .whenComplete(
-        () => print('Future is complete.'),
+        () => print('Future is complete'),
       );
 
   print('After the future');
@@ -79,15 +79,15 @@ Future<void> gettingResultWithAsyncAwait() async {
       Duration(seconds: 1),
       () => 42,
     );
-    throw Exception('There was an error');
+    //throw Exception('There was an error');
     print('Value: $value');
   } catch (error) {
-    print('Error: $error');
+    print(error);
   } finally {
-    print('Future is complete.');
+    print('Future is complete');
   }
 
-  print('After the future.');
+  print('After the future');
 }
 
 Future<void> asynchronousNetwordRequest() async {
