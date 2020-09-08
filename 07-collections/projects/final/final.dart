@@ -6,10 +6,10 @@ void main() {
   basicListOperations();
   mutableAndImmutableLists();
   listProperties();
+  loopingOverElementsOfList();
   spreadOperator();
   collectionIf();
   collectionFor();
-  loopingOverElementsOfList();
 
   /// Sets
   creatingSets();
@@ -89,6 +89,15 @@ void listProperties() {
   print(drinks.length > 0);
 }
 
+void loopingOverElementsOfList() {
+  const desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
+  for (var dessert in desserts) {
+    print(dessert);
+  }
+  desserts.forEach((dessert) => print(dessert));
+  desserts.forEach(print);
+}
+
 void spreadOperator() {
   const pastries = ['cookies', 'croissants'];
   const candy = ['Junior Mints', 'Twizzlers', 'M&Ms'];
@@ -118,15 +127,6 @@ void collectionFor() {
     for (var desert in deserts) desert.toUpperCase(),
   ];
   print(bigDeserts);
-}
-
-void loopingOverElementsOfList() {
-  const desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
-  for (var dessert in desserts) {
-    print(dessert);
-  }
-  desserts.forEach((dessert) => print(dessert));
-  desserts.forEach(print);
 }
 
 void creatingSets() {
