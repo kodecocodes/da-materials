@@ -3,6 +3,8 @@
 
 import 'dart:math';
 
+const global = 'Hello, world';
+
 void main() {
   /// Comparison operators
 
@@ -29,13 +31,22 @@ void main() {
   print('isOneGreaterThanTwo: $isOneGreaterThanTwo');
   print('isOneLessThanTwo: $isOneLessThanTwo');
 
+  print(1 <= 2);
+  print(2 <= 2);
+  print(2 >= 1);
+  print(2 >= 2);
+
   /// Boolean logic
 
-  const and = true && true;
-  print('and: $and');
+  const isSunny = true;
+  const isFinished = true;
+  const willGoCycling = isSunny && isFinished;
+  print('willGoCycling: $willGoCycling');
 
-  const or = true || false;
-  print('or: $or');
+  const willTraveledToAustralia = true;
+  const canFindPhoto = false;
+  const canDrawPlatypus = willTraveledToAustralia || canFindPhoto;
+  print('canDrawPlatypus: $canDrawPlatypus');
 
   const andTrue = 1 < 2 && 4 > 3;
   const andFalse = 1 < 2 && 3 > 4;
@@ -46,13 +57,13 @@ void main() {
   print('orTrue: $orTrue');
   print('orFalse: $orFalse');
 
-  const andOr = 3 > 4 && (1 < 2 || 1 < 4);
+  const andOr = 3 > 4 && 1 < 2 || 1 < 4;
   print('andOr: $andOr');
 
-  const withoutParentheses = 3 > 4 && 1 < 2 || 1 < 4;
-  const withParentheses = (3 > 4 && 1 < 2) || 1 < 4;
-  print('withoutParentheses: $withoutParentheses');
-  print('withParentheses: $withParentheses');
+  const orFirst = 3 > 4 && (1 < 2 || 1 < 4);
+  const andFirst = (3 > 4 && 1 < 2) || 1 < 4;
+  print('orFirst: $orFirst');
+  print('andFirst: $andFirst');
 
   /// String equality
 
@@ -86,31 +97,21 @@ void main() {
   }
   print(command);
 
-  /// Short circuiting
+  /// Variable scope
 
-  const name = 'Vicki Wenderlich';
-  if (1 > 2 && name == 'Ray Wenderlich') {
-    // ...
+  const local = 'Hello, main';
+
+  if (2 > 1) {
+    const insideIf = 'Hello, anybody?';
+
+    print(global);
+    print(local);
+    print(insideIf);
   }
 
-  if (1 < 2 || name == 'Ray Wenderlich') {
-    // ...
-  }
-
-  /// Encapsulating variables
-
-  // const isHungry = true;
-  // var decision = 'Skip lunch';
-  // if (isHungry) {
-  //   decision = 'Eat lunch.';
-  // }
-  // print(decision);
-
-  const isHungry = true;
-  if (isHungry) {
-    var decision = 'Eat lunch.';
-  }
-  // print(decision); // error
+  print(global);
+  print(local);
+  // print(insideIf); // Not allowed!
 
   /// The ternary conditional operator
 
@@ -125,6 +126,80 @@ void main() {
 
   message = (score >= 60) ? 'You passed' : 'You failed';
   print('message: $message');
+
+  /// Switch statements
+
+  const number = 3;
+  if (number == 0) {
+    print('zero');
+  } else if (number == 1) {
+    print('one');
+  } else if (number == 2) {
+    print('two');
+  } else if (number == 3) {
+    print('three');
+  } else if (number == 4) {
+    print('four');
+  } else {
+    print('something else');
+  }
+
+  switch (number) {
+    case 0:
+      print('zero');
+      break;
+    case 1:
+      print('one');
+      break;
+    case 2:
+      print('two');
+      break;
+    case 3:
+      print('three');
+      break;
+    case 4:
+      print('four');
+      break;
+    default:
+      print('something else');
+  }
+
+  const weather = 'cloudy';
+  switch (weather) {
+    case 'sunny':
+      print('Put on sunscreen.');
+      break;
+    case 'snowy':
+      print('Get your skis.');
+      break;
+    case 'cloudy':
+    case 'rainy':
+      print('Bring an umbrella.');
+      break;
+    default:
+      print("I'm not familiar with that weather.");
+  }
+
+  /// Enumerated types
+
+  // Find the enum defined below, outside of the main() function.
+  const weatherToday = Weather.cloudy;
+  switch (weatherToday) {
+    case Weather.sunny:
+      print('Put on sunscreen.');
+      break;
+    case Weather.snowy:
+      print('Get your skis.');
+      break;
+    case Weather.cloudy:
+    case Weather.rainy:
+      print('Bring an umbrella.');
+      break;
+  }
+
+  print(weatherToday);
+  final index = weatherToday.index;
+  print(index);
 
   /// While loops
 
@@ -209,60 +284,6 @@ void main() {
   myNumbers.forEach((number) {
     print(number);
   });
-
-  /// Switch statements
-
-  const number = 10;
-  switch (number) {
-    case 0:
-      print('Zero');
-      break;
-    default:
-      print('Non-zero');
-  }
-
-  if (number == 0) {
-    print('Zero');
-  } else {
-    print('Non-zero');
-  }
-
-  const weather = 'cloudy';
-  switch (weather) {
-    case 'sunny':
-      print('Put on sunscreen.');
-      break;
-    case 'snowy':
-      print('Get your skis.');
-      break;
-    case 'cloudy':
-    case 'rainy':
-      print('Bring an umbrella.');
-      break;
-    default:
-      print("I'm not familiar with that weather.");
-  }
-
-  /// Enumerated types
-
-  // Find the enum defined below, outside of the main() function.
-  const weatherToday = Weather.cloudy;
-  switch (weatherToday) {
-    case Weather.sunny:
-      print('Put on sunscreen.');
-      break;
-    case Weather.snowy:
-      print('Get your skis.');
-      break;
-    case Weather.cloudy:
-    case Weather.rainy:
-      print('Bring an umbrella.');
-      break;
-  }
-
-  print(weatherToday);
-  final index = weatherToday.index;
-  print(index);
 }
 
 enum Weather {
