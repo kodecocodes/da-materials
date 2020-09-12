@@ -175,7 +175,7 @@ Future<void> errorHandlingCallbacks() async {
       print(error);
     },
     onDone: () {
-      print('Stream has finished');
+      print('All finished');
     },
   );
 }
@@ -183,6 +183,7 @@ Future<void> errorHandlingCallbacks() async {
 Future<void> errorHandlingTryCatch() async {
   try {
     final file = File('assets/text_long.txt');
+    //final file = File('assets/pink_elephants.txt');
     final stream = file.openRead();
     await for (var data in stream) {
       print(data.length);
@@ -190,7 +191,7 @@ Future<void> errorHandlingTryCatch() async {
   } on Exception catch (error) {
     print(error);
   } finally {
-    print('Stream has finished');
+    print('All finished');
   }
 }
 
@@ -205,7 +206,7 @@ Future<void> cancellingStream() async {
     },
     cancelOnError: true,
     onDone: () {
-      print('Stream has finished');
+      print('All finished');
     },
   );
 }

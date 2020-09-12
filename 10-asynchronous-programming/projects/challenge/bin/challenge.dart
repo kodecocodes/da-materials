@@ -174,7 +174,7 @@ Future<void> challenge3() async {
     final request = http.Request('GET', url);
     final response = await client.send(request);
     final stream = response.stream;
-    await for (var data in stream) {
+    await for (var data in stream.transform(utf8.decoder)) {
       print(data.length);
     }
   } on Exception catch (error) {
