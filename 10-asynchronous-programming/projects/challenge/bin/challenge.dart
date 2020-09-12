@@ -12,16 +12,16 @@ Future<void> main() async {
   /// want to examine.
 
   challenge1();
-  //await challenge2();
-  //await challenge3();
-  //await challenge4();
+  // await challenge2();
+  // await challenge3();
+  // await challenge4();
 }
 
 /// Challenge 1:
 ///
-/// This is a fun one and will test how well you understand how Dart handles 
-/// asynchronous tasks. In what order will Dart print the text with the 
-/// following `print` statements? Why? 
+/// This is a fun one and will test how well you understand how Dart handles
+/// asynchronous tasks. In what order will Dart print the text with the
+/// following `print` statements? Why?
 void challenge1() {
   print('1 synchronous');
   Future(() => print('2 event queue')).then(
@@ -110,7 +110,6 @@ Future<void> challenge2() async {
       final jsonList = jsonDecode(rawJsonString);
       for (var element in jsonList) {
         final comment = Comment.fromJson(element);
-        //print(comment);
         commentList.add(comment);
       }
     } else {
