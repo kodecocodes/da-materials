@@ -198,6 +198,9 @@ void extensions() {
   print(revealed);
 
   print(5.cubed);
+
+  final language = ProgrammingLanguage.dart;
+  print(language.isStronglyTyped);
 }
 
 String encode(String input) {
@@ -229,5 +232,21 @@ extension on String {
 extension on int {
   int get cubed {
     return this * this * this;
+  }
+}
+
+enum ProgrammingLanguage { dart, swift, javaScript }
+
+extension on ProgrammingLanguage {
+  bool get isStronglyTyped {
+    switch (this) {
+      case ProgrammingLanguage.dart:
+      case ProgrammingLanguage.swift:
+        return true;
+      case ProgrammingLanguage.javaScript:
+        return false;
+      default:
+        throw Exception('Unknown Programming Language $this');
+    }
   }
 }
