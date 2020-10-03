@@ -6,7 +6,8 @@ Each edition has its own branch, named `editions/[EDITION]`. The default branch 
 
 ## Release History
 
-| Branch                                                                          | Edition | Release Date |
-| --------------------------------------------------------------------------------|:-------:|:------------:|
-| [editions/1.0](https://github.com/raywenderlich/da-materials/tree/editions/1.0) | 1.0     | YYYY-MM-DD   |
+| Branch                                                                                  | Edition | Release Date |
+| ----------------------------------------------------------------------------------------|:-------:|:------------:|
+| [editions/1.0.ea1](https://github.com/raywenderlich/da-materials/tree/editions/1.0.ea1) | 1.0.ea1 | 2020-10-01   |
+| [editions/1.0](https://github.com/raywenderlich/da-materials/tree/editions/1.0)         | 1.0     | YYYY-MM-DD   |
 
