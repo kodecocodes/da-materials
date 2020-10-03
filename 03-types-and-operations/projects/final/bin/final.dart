@@ -2,7 +2,7 @@
 // For full license & permission details, see LICENSE.
 
 // If you get the error "Target of URI doesn't exist", make sure you have
-// run `pub get`. Then restart VS Code.
+// run `dart pub get`. Then restart VS Code.
 import 'package:characters/characters.dart';
 
 void main() {

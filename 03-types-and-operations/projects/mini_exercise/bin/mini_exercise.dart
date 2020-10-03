@@ -14,14 +14,14 @@ void main() {
 
   /// Data types in Dart: Mini-exercise 2
   ///
-  /// Create a constant called `average` and set it equal to the average of
+  /// Create a constant called `averageAge` and set it equal to the average of
   /// `age1` and `age2` using the operation `(age1 + age2) / 2`. Hover over
-  /// `average` to check the type. Then check the result of `average`. Why is
-  /// it a `double` if the components are all `int`?
+  /// `averageAge` to check the type. Then check the result of `averageAge`. Why
+  /// is it a `double` if the components are all `int`?
 
-  const average = (age1 + age2) / 2;
-  print(average);
-  // `average` is a `double` because any time you divide in Dart, the
+  const averageAge = (age1 + age2) / 2;
+  print(averageAge);
+  // `averageAge` is a `double` because any time you divide in Dart, the
   // result is a `double`. Division can result in non-integer answers, so
   // making the result an `int` could cause a loss of precision.
 

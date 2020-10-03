@@ -2,7 +2,7 @@
 // For full license & permission details, see LICENSE.
 
 // If you get the error "Target of URI doesn't exist", make sure you have
-// run `pub get`. Then restart VS Code.
+// run `dart pub get`. Then restart VS Code.
 import 'package:characters/characters.dart';
 
 void main() {
@@ -78,7 +78,9 @@ void main() {
   print(name);
   // `const` variables can't be changed, so you need to use `var`.
 
-  /// Challenge 5: What is the type of `value`?
+  /// Challenge 5: What type?
+  /// 
+  /// What is the type of `value`?
   ///
   /// ```
   /// const value = 10 / 2;
@@ -90,7 +92,9 @@ void main() {
   // Division always produces a double in Dart.
   // You can see the type by hovering your mouse pointer over `value`.
 
-  /// Challenge 6: What is the value of `summary`?
+  /// Challenge 6: In summary
+  /// 
+  /// What is the value of the constant named `summary`?
   ///
   /// ```
   /// const number = 10;
