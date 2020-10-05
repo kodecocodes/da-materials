@@ -84,7 +84,7 @@ void main() {
 
   /// Challenge 5: How many times?
   ///
-  /// In the following for loop, what will be the value of sum, and how many
+  /// In the following `for` loop, what will be the value of sum, and how many
   /// iterations will happen?
   ///
   /// ```

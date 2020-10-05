@@ -43,9 +43,9 @@ void main() {
   const willGoCycling = isSunny && isFinished;
   print('willGoCycling: $willGoCycling');
 
-  const willTraveledToAustralia = true;
+  const willTravelToAustralia = true;
   const canFindPhoto = false;
-  const canDrawPlatypus = willTraveledToAustralia || canFindPhoto;
+  const canDrawPlatypus = willTravelToAustralia || canFindPhoto;
   print('canDrawPlatypus: $canDrawPlatypus');
 
   const andTrue = 1 < 2 && 4 > 3;

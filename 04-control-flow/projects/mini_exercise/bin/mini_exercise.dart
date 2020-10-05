@@ -16,20 +16,20 @@ void main() {
 
   /// Comparison operators: Mini-exercise 2
   ///
-  /// Create another constant named `marysAge` and set it to `30`. Then, create
+  /// Create another constant named `maryAge` and set it to `30`. Then, create
   /// a constant named `bothTeenagers` that uses Boolean logic to determine if
   /// both you and Mary are teenagers.
 
-  const marysAge = 30;
-  const bothTeenagers = (marysAge >= 13 && marysAge <= 19) && isTeenager;
+  const maryAge = 30;
+  const bothTeenagers = (maryAge >= 13 && maryAge <= 19) && isTeenager;
   print('bothTeenagers: $bothTeenagers');
 
   /// Comparison operators: Mini-exercise 3
   ///
-  /// Create a constant named `reader` and set it to your name as a string.
-  /// Create a constant named `ray` and set it to Ray Wenderlich. Create a
-  /// constant named `rayIsReader` that uses string equality to determine if
-  /// `reader` and `ray` are equal.
+  /// Create a String constant named `reader` and set it to your name. Create 
+  /// another String constant named `ray` and set it to `Ray Wenderlich`. 
+  /// Create a Boolean constant named `rayIsReader` that uses string equality 
+  /// to determine if `reader` and `ray` are equal.
 
   const reader = 'Bob Smith';
   const ray = 'Ray Wenderlich';
@@ -52,18 +52,17 @@ void main() {
 
   /// The if statement: Mini-exercise 2
   ///
-  /// Create a constant named `answer` and use a ternary condition to set it
-  /// equal to the result you print out for the same cases in the above
-  /// exercise. Then print out answer.
+  /// Use a ternary conditional operator to replace the `else-if` statement 
+  /// that you used above. Set the result to a variable named `answer`.
   const answer = (isTeenager) ? 'Teenager' : 'Not a teenager';
   print(answer);
 
   /// Loops: Mini-exercise 1
   ///
-  /// Create a variable named `counter` and set it equal to `0`. Create a
-  /// `while` loop with the condition `counter < 10` which prints out
-  /// `counter is X` (where `X` is replaced with `counter` value) and then
-  /// increments `counter` by 1.
+  /// Create a variable named `counter` and set it equal to `0`. Create a 
+  /// `while` loop with the condition `counter < 10`. The loop body should 
+  /// print out "counter is X" (where X is replaced with the value of 
+  /// `counter`) and then increment `counter` by 1.
 
   var counter = 0;
   while (counter < 10) {
@@ -73,8 +72,8 @@ void main() {
 
   /// Loops: Mini-exercise 2
   ///
-  /// Write a `for` loop starting at 1 and ending with 10 inclusive. Print the
-  /// square of each number.
+  /// Write a `for` loop starting at `1` and ending with `10` inclusive. Print 
+  /// the square of each number.
 
   for (var i = 1; i <= 10; i++) {
     print(i * i);
