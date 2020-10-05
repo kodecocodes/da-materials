@@ -47,8 +47,8 @@ void anatomyOfDartFunction() {
 }
 
 void usingMultipleParameters() {
-  void helloPersonAndPet(String member, String pet) {
-    print('Hello, $member, and your furry friend, $pet!');
+  void helloPersonAndPet(String person, String pet) {
+    print('Hello, $person, and your furry friend, $pet!');
   }
 
   helloPersonAndPet('Fluffy', 'Chris');
