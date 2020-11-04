@@ -10,9 +10,9 @@ void main() {
 void challenge1() {
   /// Challenge 1: Heavy monotremes
   ///
-  /// Dart has a class named `Comparable` which the `sort` method of a list
-  /// uses to sort its elements. Add a `weight` field to the `Platypus` class
-  /// you made in this lesson. Then make `Platypus` implement `Comparable`
+  /// Dart has a class named `Comparable` which is used by the the `sort` method
+  /// of `List` to sort its elements. Add a `weight` field to the `Platypus` 
+  /// class you made in this lesson. Then make `Platypus` implement `Comparable`
   /// so that when you have a list of `Platypus` objects, calling sort on the
   /// list will sort them by weight.
 
@@ -77,7 +77,7 @@ void challenge2() {
   /// Challenge 2: Fake notes
   ///
   /// Design an interface to sit between the business logic of your
-  /// note-taking app and a SQL database. After that implement a fake
+  /// note-taking app and a SQL database. After that, implement a fake
   /// database class that will return mock data.
   
   final database = DataStorage();
