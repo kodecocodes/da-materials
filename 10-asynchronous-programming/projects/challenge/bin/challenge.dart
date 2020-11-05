@@ -29,12 +29,17 @@ void challenge1() {
   );
   Future.microtask(() => print('4 microtask queue'));
   Future.microtask(() => print('5 microtask queue'));
-  Future.delayed(Duration(seconds: 1), () => print('6 event queue'));
+  Future.delayed(
+    Duration(seconds: 1),
+    () => print('6 event queue'),
+  );
   Future(() => print('7 event queue')).then(
     (value) => Future(() => print('8 event queue')),
   );
   Future(() => print('9 event queue')).then(
-    (value) => Future.microtask(() => print('10 microtask queue')),
+    (value) => Future.microtask(
+      () => print('10 microtask queue'),
+    ),
   );
   print('11 synchronous');
 }
