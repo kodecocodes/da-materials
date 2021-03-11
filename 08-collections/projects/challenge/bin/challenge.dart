@@ -37,11 +37,8 @@ void challenge2() {
     final characterFrequencyMap = <String, int>{};
     for (var codePoint in text.runes) {
       final character = String.fromCharCode(codePoint);
-      if (characterFrequencyMap.containsKey(character)) {
-        characterFrequencyMap[character]++;
-      } else {
-        characterFrequencyMap[character] = 1;
-      }
+      final frequency = characterFrequencyMap[character] ?? 0;
+      characterFrequencyMap[character] = frequency + 1;
     }
     return characterFrequencyMap;
   }
