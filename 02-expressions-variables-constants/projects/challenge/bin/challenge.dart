@@ -51,11 +51,8 @@ void main() {
   /// Work out what answer equals when you add the following lines of code:
   ///
   /// ```
-  /// // 1
   /// const answer1 = (x * 100) + y;
-  /// // 2
   /// const answer2 = (x * 100) + (y * 100);
-  /// // 3
   /// const answer3 = (x * 100) + (y / 10);
   /// ```
 

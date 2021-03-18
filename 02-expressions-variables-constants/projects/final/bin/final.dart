@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Razeware LLC
+// Copyright (c) 2021 Razeware LLC
 // For full license & permission details, see LICENSE.
 
 import 'dart:math';
@@ -94,7 +94,7 @@ void main() {
   // someNumber = 3.14159; // No, no, no.
 
   /// Constants
-  // const myConstant = 10;
+  const myConstant = 10;
   // myConstant = 0; // Not allowed.
 
   final hoursSinceMidnight = DateTime.now().hour;
