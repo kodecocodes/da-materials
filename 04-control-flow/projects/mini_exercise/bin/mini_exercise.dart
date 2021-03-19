@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Razeware LLC
+// Copyright (c) 2021 Razeware LLC
 // For full license & permission details, see LICENSE.
 
 import 'dart:math';
@@ -26,8 +26,8 @@ void main() {
 
   /// Comparison operators: Mini-exercise 3
   ///
-  /// Create a String constant named `reader` and set it to your name. Create 
-  /// another String constant named `ray` and set it to `Ray Wenderlich`. 
+  /// Create a `String` constant named `reader` and set it to your name. Create 
+  /// another `String` constant named `ray` and set it to `'Ray Wenderlich'`. 
   /// Create a Boolean constant named `rayIsReader` that uses string equality 
   /// to determine if `reader` and `ray` are equal.
 
