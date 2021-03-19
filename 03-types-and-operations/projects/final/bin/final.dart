@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Razeware LLC
+// Copyright (c) 2021 Razeware LLC
 // For full license & permission details, see LICENSE.
 
 // If you get the error "Target of URI doesn't exist", make sure you have
@@ -152,6 +152,6 @@ doing this.''';
   // myVariable = 42;      // OK
   // myVariable = 'hello'; // OK
 
-  Object myVariable = 42;
+  Object? myVariable = 42;
   myVariable = 'hello'; // OK
 }

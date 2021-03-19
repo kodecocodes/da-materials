@@ -2,25 +2,19 @@
   "configVersion": 2,
   "packages": [
     {
-      "name": "meta",
-      "rootUri": "file:///Users/n382213/.pub-cache/hosted/pub.dartlang.org/meta-1.2.2",
-      "packageUri": "lib/",
-      "languageVersion": "1.12"
-    },
-    {
       "name": "pedantic",
-      "rootUri": "file:///Users/n382213/.pub-cache/hosted/pub.dartlang.org/pedantic-1.9.2",
+      "rootUri": "file:///Users/jonathan/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.0",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "2.12"
     },
     {
       "name": "starter_project",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.8"
+      "languageVersion": "2.12"
     }
   ],
-  "generated": "2020-09-08T14:30:00.459500Z",
+  "generated": "2021-03-18T11:03:09.231929Z",
   "generator": "pub",
-  "generatorVersion": "2.9.1"
+  "generatorVersion": "2.12.1"
 }
