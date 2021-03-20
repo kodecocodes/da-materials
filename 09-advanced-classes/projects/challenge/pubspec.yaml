@@ -6,8 +6,5 @@ description: A simple command-line application.
 environment:
   sdk: '>=2.12.2 <3.0.0'
 
-#dependencies:
-#  path: ^1.7.0
-
 dev_dependencies:
   pedantic: ^1.11.0
