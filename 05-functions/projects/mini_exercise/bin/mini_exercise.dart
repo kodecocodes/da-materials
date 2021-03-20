@@ -1,7 +1,5 @@
-// Copyright (c) 2020 Razeware LLC
+// Copyright (c) 2021 Razeware LLC
 // For full license & permission details, see LICENSE.
-
-import 'package:meta/meta.dart';
 
 void main() {
   functionBasicsMiniExercise1();
@@ -31,26 +29,25 @@ void functionBasicsMiniExercise1() {
 ///
 /// Add another `int` parameter called `numberPeople` so that the
 /// function returns something like "You're wonderful, Bob. 10 people
-/// think so." Make both inputs named parameters.
+/// think so."
 void functionBasicsMiniExercise2() {
-  String youAreWonderful({String name, int numberPeople}) {
-    return "You're wonderful, $name. $numberPeople think so.";
+  String youAreWonderful(String name, int numberPeople) {
+    return "You're wonderful, $name. $numberPeople people think so.";
   }
 
-  print(youAreWonderful(name: 'Bob', numberPeople: 10));
+  print(youAreWonderful('Bob', 10));
 }
 
 /// Function basics: Mini-exercise 3
 ///
-/// Make `name` required and `numberPeople` have a default of `30`.
+///  Make both inputs named parameters. Make `name` required and 
+/// `numberPeople` have a default of `30`.
 void functionBasicsMiniExercise3() {
-  // Remember to add the meta package to pubspec.yaml.
-  // Also import 'package:meta/meta.dart';
   String youAreWonderful({
-    @required String name,
+    required String name,
     int numberPeople = 30,
   }) {
-    return "You're wonderful, $name. $numberPeople think so.";
+    return "You're wonderful, $name. $numberPeople people think so.";
   }
 
   print(youAreWonderful(name: 'Mary'));

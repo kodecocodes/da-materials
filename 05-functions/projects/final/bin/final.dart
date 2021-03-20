@@ -1,7 +1,5 @@
-// Copyright (c) 2020 Razeware LLC
+// Copyright (c) 2021 Razeware LLC
 // For full license & permission details, see LICENSE.
-
-import 'package:meta/meta.dart';
 
 /// Since this lesson is about functions, the source code also
 /// uses nested functions to divide the sections out. This
@@ -56,7 +54,7 @@ void usingMultipleParameters() {
 }
 
 void makingParametersOptional() {
-  String fullName(String first, String last, [String title]) {
+  String fullName(String first, String last, [String? title]) {
     if (title != null) {
       return '$title $first $last';
     } else {
@@ -80,31 +78,28 @@ void providingDefaultValues() {
 }
 
 void namingParameters() {
-  bool withinTolerance({int value, int min = 0, int max = 10}) {
+  bool withinTolerance(int value, {int min = 0, int max = 10}) {
     return min <= value && value <= max;
   }
 
-  print(withinTolerance(value: 9, min: 7, max: 11));
-  print(withinTolerance(min: 7, value: 9, max: 11));
-  print(withinTolerance(max: 11, min: 7, value: 9));
-  print(withinTolerance(value: 5));
-  print(withinTolerance(value: 15));
-  print(withinTolerance(value: 5, min: 7));
-  print(withinTolerance(value: 15, max: 20));
-
-  //print(withinTolerance());
+  print(withinTolerance(9, min: 7, max: 11));
+  print(withinTolerance(9, max: 11, min: 7));
+  print(withinTolerance(5));
+  print(withinTolerance(15));
+  print(withinTolerance(5, min: 7));
+  print(withinTolerance(15, max: 20));
 }
 
 void makingNamedParametersRequired() {
   bool withinTolerance({
-    @required int value,
+    required int value,
     int min = 0,
     int max = 10,
   }) {
     return min <= value && value <= max;
   }
 
-  //print(withinTolerance());
+  // print(withinTolerance());
   print(withinTolerance(value: 9));
 }
 
@@ -137,13 +132,13 @@ void optionalTypes() {
   //   return '$number is a very nice number.';
   // }
 
-  // compliment(number) {
-  //   return '$number is a very nice number.';
-  // }
-
-  dynamic compliment(dynamic number) {
+  compliment(number) {
     return '$number is a very nice number.';
   }
+
+  // String compliment(dynamic number) {
+  //   return '$number is a very nice number.';
+  // }
 }
 
 void assigningFunctionsToVariables() {

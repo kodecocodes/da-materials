@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Razeware LLC
+// Copyright (c) 2021 Razeware LLC
 // For full license & permission details, see LICENSE.
 
 import 'dart:math';
@@ -32,8 +32,8 @@ void main(List<String> arguments) {
 ///
 /// that returns true if prime and false otherwise. A number is prime if
 /// it's only divisible by 1 and itself. Loop through the numbers from 1
-/// to the number and find the numbers divisors. If it has any divisors
-/// other than 1 and itself, it is not prime.
+/// to the number and find the number's divisors. If it has any divisors
+/// other than 1 and itself, it's not prime.
 ///
 /// Check the following cases:
 /// isPrime(6); // false
@@ -82,7 +82,7 @@ void challenge1() {
 /// of 2 four times. Confirm that you get the result 65536, since
 /// 2 squared is 4,
 /// 4 squared is 16,
-/// 16` squared is 256, and
+/// 16 squared is 256, and
 /// 256 squared is 65536.
 void challenge2() {
   int repeatTask(int times, int input, Function task) {
