@@ -36,7 +36,7 @@ void constructors() {
   // final jb = User(id: -1, name: 'JB Lorenzo');
   final jb = User(id: 100, name: 'JB Lorenzo');
   print(jb);
-  const user = User(name: 'Ray', id: 42);
+  const user = User(id: 42, name: 'Ray');
   print(user);
   const anonymousUser = User.anonymous();
   print(anonymousUser);
@@ -51,6 +51,9 @@ void dartObjects() {
   print(myObject.myProperty); // 1
   anotherObject.myProperty = 2;
   print(myObject.myProperty); // 2
+  const ray = User(id: 42, name: 'Ray');
+  print(ray.id);
+  print(ray.name);
   // final email = Email();
   // email.value = 'ray@example.com';
   final email = Email('ray@example.com');

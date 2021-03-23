@@ -3,34 +3,33 @@
 
 class User {
   const User({
-    this.id = _anonymousUserId,
-    this.name = _anonymousUserName,
-  })  : assert(name != null),
-        assert(id >= 0);
+    this.id = _anonymousId,
+    this.name = _anonymousName,
+  }) : assert(id >= 0);
 
   const User.anonymous() : this();
 
+  // User.fromJson(Map<String, Object> json)
+  //     : id = json['id'] as int,
+  //       name = json['name'] as String;
+
   // factory User.fromJson(Map<String, Object> json) {
-  //   final userId = json['id'];
-  //   final userName = json['name'];
+  //   final userId = json['id'] as int;
+  //   final userName = json['name'] as String;
   //   return User(id: userId, name: userName);
   // }
 
-  // static User fromJson(Map<String, Object> json) {
-  //   final userId = json['id'];
-  //   final userName = json['name'];
-  //   return User(id: userId, name: userName);
-  // }
-
-  User.fromJson(Map<String, Object> json)
-    : id = json['id'],
-      name = json['name'];
+  static User fromJson(Map<String, Object> json) {
+    final userId = json['id'] as int;
+    final userName = json['name'] as String;
+    return User(id: userId, name: userName);
+  }
 
   final String name;
   final int id;
 
-  static const _anonymousUserId = 0;
-  static const _anonymousUserName = 'anonymous';
+  static const _anonymousId = 0;
+  static const _anonymousName = 'anonymous';
 
   String toJson() {
     return '{"id":$id,"name":"$name"}';

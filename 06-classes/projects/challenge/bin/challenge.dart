@@ -13,7 +13,7 @@ void main() {
 
   final ernie = Student('Ernie', 'Henson', 95);
   final bert = Student('Bert', 'Oz', 85);
-  print("$ernie\n$bert");
+  print('$ernie\n$bert');
 
   /// Challenge 2: Spheres
   ///
@@ -36,11 +36,12 @@ class Student {
   final String lastName;
   int grade;
 
-  String toString() => "$firstName $lastName: $grade";
+  @override
+  String toString() => '$firstName $lastName: $grade';
 }
 
 class Sphere {
-  const Sphere({int radius})
+  const Sphere({required int radius})
       : assert(radius > 0),
         _radius = radius;
 
