@@ -104,8 +104,8 @@ void spreadOperator() {
   const desserts = ['donuts', ...pastries, ...candy];
   print(desserts);
 
-  List<String> coffees;
-  final hotDrinks = ['green tea', ...?coffees];
+  List<String>? coffees;
+  final hotDrinks = ['milk tea', ...?coffees];
   print(hotDrinks);
 }
 
@@ -220,6 +220,7 @@ void operationsOnMaps() {
 
   final numberOfCakes = inventory['cakes'];
   print(numberOfCakes);
+  print(numberOfCakes?.isEven);
 
   inventory['brownies'] = 3;
   print(inventory);
@@ -284,8 +285,11 @@ void filteringList() {
 
 void consolidatingList() {
   const amounts = [199, 299, 299, 199, 499];
-  final total = amounts.reduce((sum, element) => sum + element);
-  // final total = amounts.fold(0, (sum, element) => sum + element);
+  //final total = amounts.reduce((sum, element) => sum + element);
+  final total = amounts.fold(
+    0,
+    (int sum, element) => sum + element,
+  );
   print(total);
 }
 
