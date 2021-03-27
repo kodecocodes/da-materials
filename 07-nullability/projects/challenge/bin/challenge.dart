@@ -16,17 +16,13 @@ void challenge1() {
   /// will never be `null`. Give `result` a default of `0` if the function
   /// returns `null`.
 
-  int randomNothing() {
+  int? randomNothing() {
     final isTrue = Random().nextBool();
     return (isTrue) ? 42 : null;
   }
 
   final result = randomNothing() ?? 0;
   print(result);
-
-  /// Note for sound null safety:
-  ///
-  /// Make the function return type be `int?` instead of `int`.
 }
 
 void challenge2() {
@@ -41,37 +37,35 @@ void challenge2() {
   ///   Boolean property called `surnameIsFirst` to keep track of this.
   /// - Not everyone in the world has a surname.
   /// - Add a `toString` method that prints the full name.
-  ///
-  /// Use sound null safety.
 
-  // final ray = Name(givenName: 'Ray', surname: 'Wenderlich');
-  // final liMing = Name(surname: 'Li', givenName: 'Ming', surnameIsFirst: true);
-  // final baatar = Name(givenName: 'Baatar');
+  final ray = Name(givenName: 'Ray', surname: 'Wenderlich');
+  final liMing = Name(surname: 'Li', givenName: 'Ming', surnameIsFirst: true);
+  final baatar = Name(givenName: 'Baatar');
 
-  // print(ray);
-  // print(liMing);
-  // print(baatar);
+  print(ray);
+  print(liMing);
+  print(baatar);
 }
 
-// class Name {
-//   Name({
-//     required this.givenName,
-//     this.surname,
-//     this.surnameIsFirst = false,
-//   });
+class Name {
+  Name({
+    required this.givenName,
+    this.surname,
+    this.surnameIsFirst = false,
+  });
 
-//   final String givenName;
-//   final String? surname;
-//   final bool surnameIsFirst;
+  final String givenName;
+  final String? surname;
+  final bool surnameIsFirst;
 
-//   @override
-//   String toString() {
-//     if (surname == null) {
-//       return givenName;
-//     }
-//     if (surnameIsFirst) {
-//       return '$surname $givenName';
-//     }
-//     return '$givenName $surname';
-//   }
-// }
+  @override
+  String toString() {
+    if (surname == null) {
+      return givenName;
+    }
+    if (surnameIsFirst) {
+      return '$surname $givenName';
+    }
+    return '$givenName $surname';
+  }
+}

@@ -2,108 +2,140 @@
 // For full license & permission details, see LICENSE.
 
 void main() {
+  // Null overview
   whatNullMeans();
   problemWithNull();
-  nullByDefault();
+  nullableVsNonNullable();
+
+  // Handling nullable types
+  handlingNullableTypes();
+  typePromotion();
   ifNullOperator();
   nullAwareAssignmentOperator();
   nullAwareAccess();
-
-  // Null Safety DartPad
-  nonNullableByDefault();
-  initializingNonNullableClassFields();
-  handlingNullableValues();
-  typePromotion();
-  moreNullAwareOperators();
+  nullAssertionOperator();
+  nullAwareCascadeOperator();
+  nullAwareIndexOperator();
+  nullableInstanceVariables();
   lateKeyword();
 }
 
 void whatNullMeans() {
-  // final postalCode = 12345;
-  // final postalCode = -1;
-  final postalCode = null;
+  int postalCode = 12345;
+  // int postalCode = -1;
+  // int postalCode = null;
 }
 
 void problemWithNull() {
-  // bool isPositive(int anInteger) {
-  //   return !anInteger.isNegative;
-  // }
-
-  // bool isPositive(int anInteger) {
-  //   assert(anInteger != null);
-  //   return !anInteger.isNegative;
-  // }
-
   bool isPositive(int anInteger) {
-    if (anInteger == null) {
-      return false;
-    }
     return !anInteger.isNegative;
   }
 
-  isPositive(null);
-  print(isPositive(null));
+  print(isPositive(3));
+  print(isPositive(-1));
+  // print(isPositive(null));
 }
 
-void nullByDefault() {
-  int age;
-  double height;
-  String message;
+void nullableVsNonNullable() {
+  int myInt = 1;
+  double myDouble = 3.14159265;
+  bool myBool = true;
+  String myString = 'Hello, Dart!';
+  // User myUser = User(id: 42, name: 'Ray');
 
+  // int postalCode = null;
+
+  int? age;
+  double? height;
+  String? message;
   print(age);
   print(height);
   print(message);
 }
 
+void handlingNullableTypes() {
+  String? name;
+  // print(name.length);
+}
+
+void typePromotion() {
+  String? name;
+  name = 'Ray';
+  print(name.length);
+
+  bool isPositive(int? anInteger) {
+    if (anInteger == null) {
+      return false;
+    }
+    return !anInteger.isNegative;
+  }
+}
+
 void ifNullOperator() {
-  String message;
-  var text = message ?? 'Error';
-  print(text);
-  message = 'Greetings!';
-  text = message ?? 'Error';
+  String? message;
+  final text = message ?? 'Error';
   print(text);
 
-  // var text;
-  if (message == null) {
-    text = 'Error';
-  } else {
-    text = message;
-  }
-  print(text);
+  // String text;
+  // if (message == null) {
+  //   text = 'Error';
+  // } else {
+  //   text = message;
+  // }
+  // print(text);
 }
 
 void nullAwareAssignmentOperator() {
-  String message;
-  // message = message ?? 'Error';
-  message ??= 'Error';
-  print(message);
+  double? fontSize;
+  fontSize = fontSize ?? 20.0;
 }
 
 void nullAwareAccess() {
-  int age;
+  int? age;
   print(age?.isNegative);
   print(age?.toDouble());
 }
 
-void nonNullableByDefault() {
-  // String myString;
-  // print(myString);
+void nullAssertionOperator() {
+  //String nonNullableString = nullableString!;
 
-  // String myString = 'I love non-nullable types!';
-
-  // String? myString;
-  // print(myString);
-
-  // bool isPositive(int anInteger) {
-  //   if (anInteger == null) {
-  //     return false;
-  //   }
-  //   return !anInteger.isNegative;
-  // }
-
-  bool isPositive(int anInteger) {
-    return !anInteger.isNegative;
+  bool? isBeautiful(String? item) {
+    if (item == 'flower') {
+      return true;
+    } else if (item == 'garbage') {
+      return false;
+    }
+    return null;
   }
+
+  //bool flowerIsBeautiful = isBeautiful('flower');
+  //bool flowerIsBeautiful = isBeautiful('flower')!;
+  //bool flowerIsBeautiful = isBeautiful('flower') as bool;
+  bool flowerIsBeautiful = isBeautiful('flower') ?? true;
+}
+
+void nullAwareCascadeOperator() {
+  // User user = User()
+  //   ..name = 'Ray'
+  //   ..id = 42;
+
+  // User? user;
+  // user
+  //   ?..name = 'Ray'
+  //   ..id = 42;
+  // String? lengthString = user?.name?.length.toString();
+}
+
+// class User {
+//   String? name;
+//   int? id;
+// }
+
+void nullAwareIndexOperator() {
+  List<int>? myList = [1, 2, 3];
+  myList = null;
+  int? myItem = myList?[2];
+  print(myItem);
 }
 
 void initializingNonNullableClassFields() {
@@ -136,87 +168,78 @@ void initializingNonNullableClassFields() {
 //   User({required this.name});
 //   String name;
 // }
+
+void nullableInstanceVariables() {
+  //final user = User(name: null);
+
+  bool isLong(String? text) {
+    if (text == null) {
+      return false;
+    }
+    return text.length > 100;
+  }
+}
+
 // class User {
+//   User({this.name});
 //   String? name;
 // }
 
-void handlingNullableValues() {
-  // String? name;
-  // print(name.length);
-}
-
-void typePromotion() {
-  // String? name;
-  // name = 'Ray';
-  // print(name.length);
-
-  // String myMethod(int? myParameter) {
-  //   if (myParameter == null) {
-  //     return 'something';
-  //   }
-  //   return myParameter.toString();
-  // }
-}
-
-void moreNullAwareOperators() {
-  // String? nullableGreeting = 'hello';
-  // //String nonNullableGreeting = nullableGreeting!;
-  // String nonNullableGreeting = nullableGreeting as String;
-  // print(nonNullableGreeting);
-
-  // bool? isBeautiful(String? item) {
-  //   if (item == 'flower') {
-  //     return true;
-  //   } else if (item == 'garbage') {
-  //     return false;
-  //   }
-  //   return null;
-  // }
-  // //bool flowerIsBeautiful = isBeautiful('flower');
-  // bool flowerIsBeautiful = isBeautiful('flower')!;
-  // print(flowerIsBeautiful);
-
-  // // User user = User()
-  // //   ..name = 'Ray'
-  // //   ..id = 42;
-  // User? user = User();
-  // user
-  //   ?..name = 'Ray'
-  //   ..id = 42;
-  // String? lengthString = user?.name?.length.toString();
-  // print(lengthString);
-
-  // List<int>? myList = [1, 2, 3];
-  // int? myItem = myList?[0];
-  // print(myItem);
-}
-// class User {
-//   String? name;
-//   int? id;
+// class TextWidget {
+//   String? text;
+//   bool isLong() {
+//     if (text == null) {
+//       return false;
+//     }
+//     //return text.length > 100; // error
+//     return text!.length > 100;
+//   }
 // }
+class TextWidget {
+  String? text;
+  bool isLong() {
+    final text = this.text; // shadowing
+    if (text == null) {
+      return false;
+    }
+    return text.length > 100;
+  }
+}
 
 void lateKeyword() {
-  // final user = User('Ray');
-  // print(user.name);
-  // print(user._secretNumber);
-
   // final user = User();
   // print(user.name);
 }
+
 // class User {
 //   User(this.name);
+
 //   final String name;
 //   late final int _secretNumber = _calculateSecret();
+
 //   int _calculateSecret() {
 //     return name.length + 42;
 //   }
 // }
+
+// class User {
+//   User(this.name) {
+//     _secretNumber = _calculateSecret();
+//   }
+//   late final int _secretNumber;
+//   final String name;
+
+//   int _calculateSecret() {
+//     return name.length + 42;
+//   }
+// }
+
 // class User {
 //   late String name;
 // }
-// class SomeClass {
-//   late String? value = doHeavyCalculation();
-//   String? doHeavyCalculation() {
-//     // do heavy calculation
-//   }
-// }
+class SomeClass {
+  late String? value = doHeavyCalculation();
+  String? doHeavyCalculation() {
+    // do heavy calculation
+  }
+}

@@ -10,31 +10,34 @@ void main() {
 void nullOverviewMiniExercise1() {
   /// Null overview: Mini-exercise 1
   /// 
-  /// Create a String variable called `profession`, but don't give it a value. 
+  /// Create a `String?` variable called `profession`, but don't give it a value. 
   /// Then you'll have `profession` `null`. :]
   
-  String profession;
+  String? profession;
   print(profession);
 }
 
 void nullOverviewMiniExercise2() {
   /// Null overview: Mini-exercise 2
   /// 
-  /// Use the null-aware access operator to print the `length` of `profession` 
-  /// without causing an error.
+  /// Give `profession` a value of "basketball player".
   
-  String profession;
-  print(profession?.length);
+  String? profession;
+  profession = 'basketball player';
+  print(profession);
 }
 
 void nullOverviewMiniExercise3() {
   /// Null overview: Mini-exercise 3
   /// 
-  /// Pretend you don't know if `profession` is `null` or not, and use the 
-  /// null-aware assignment operator to give `profession` a value of 
-  /// "basketball player".
+  /// Write the following line and then hover your cursor over the variable 
+  /// name. What type does Dart infer `iLove` to be?
+  /// 
+  /// ```
+  /// const iLove = 'Dart';
+  /// ```
   
-  String profession;
-  profession ??= 'basketball player';
-  print(profession);
+  const iLove = 'Dart';
+  print(iLove.runtimeType);
+  // `iLove` is of type String (non-nullable).
 }
