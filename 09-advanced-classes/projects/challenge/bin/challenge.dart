@@ -47,9 +47,9 @@ class Platypus extends Animal with EggLayer implements Comparable {
 
   @override
   int compareTo(other) {
-    if (this.weight > other.weight) {
+    if (weight > other.weight) {
       return 1;
-    } else if (this.weight < other.weight) {
+    } else if (weight < other.weight) {
       return -1;
     }
     return 0;

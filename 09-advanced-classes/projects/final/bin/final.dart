@@ -39,6 +39,7 @@ class Person {
   String givenName;
   String surname;
   String get fullName => '$givenName $surname';
+  @override
   String toString() => fullName;
 }
 
@@ -117,12 +118,12 @@ void interfaces() {
 
 abstract class DataRepository {
   factory DataRepository() => FakeWebServer();
-  double fetchTemperature(String city);
+  double? fetchTemperature(String city);
 }
 
 class FakeWebServer implements DataRepository {
   @override
-  double fetchTemperature(String city) {
+  double? fetchTemperature(String city) {
     return 42.0;
   }
 }
@@ -205,7 +206,7 @@ void extensions() {
 
 String encode(String input) {
   final output = StringBuffer();
-  for (int codePoint in input.runes) {
+  for (final codePoint in input.runes) {
     output.writeCharCode(codePoint + 1);
   }
   return output.toString();
@@ -222,7 +223,7 @@ extension on String {
 
   String _code(int step) {
     final output = StringBuffer();
-    for (int codePoint in runes) {
+    for (final codePoint in runes) {
       output.writeCharCode(codePoint + step);
     }
     return output.toString();

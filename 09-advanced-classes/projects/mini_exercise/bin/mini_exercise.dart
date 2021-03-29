@@ -71,7 +71,7 @@ class Watermelon extends Melon {
   Watermelon(String color) : super(color);
   @override
   void describeColor() {
-    print("The color of this watermelon is $color.");
+    print('The color of this watermelon is $color.');
   }
 }
 
