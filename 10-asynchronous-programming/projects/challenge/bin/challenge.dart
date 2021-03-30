@@ -11,8 +11,8 @@ Future<void> main() async {
   /// results will be easier to follow if you only uncomment the method you
   /// want to examine.
 
-  challenge1();
-  // await challenge2();
+  //challenge1();
+  await challenge2();
   // await challenge3();
   // await challenge4();
 }
@@ -44,8 +44,8 @@ void challenge1() {
   print('11 synchronous');
 }
 
-/// Try to answer before checking. If you were right, you deserve an ice
-/// cream sundae!
+/// Try to answer before checking. If you were right, give yourself a well
+/// deserved pat on the back!
 ///
 ///
 /// Answer:
@@ -105,7 +105,7 @@ void challenge1() {
 /// Create a `Comment` data class and convert the raw JSON to a Dart list of
 /// type `List<Comment>`.
 Future<void> challenge2() async {
-  final url = 'https://jsonplaceholder.typicode.com/comments';
+  final url = Uri.parse('https://jsonplaceholder.typicode.com/comments');
   final commentList = <Comment>[];
   try {
     final response = await http.get(url);
@@ -132,15 +132,21 @@ Future<void> challenge2() async {
 }
 
 class Comment {
-  Comment({this.postId, this.id, this.name, this.email, this.body});
+  Comment({
+    required this.postId,
+    required this.id,
+    required this.name,
+    required this.email,
+    required this.body,
+  });
 
-  factory Comment.fromJson(Map<String, Object> jsonMap) {
+  factory Comment.fromJson(Map<String, Object?> jsonMap) {
     return Comment(
-      postId: jsonMap['postId'],
-      id: jsonMap['id'],
-      name: jsonMap['name'],
-      email: jsonMap['email'],
-      body: jsonMap['body'],
+      postId: jsonMap['postId'] as int,
+      id: jsonMap['id'] as int,
+      name: jsonMap['name'] as String,
+      email: jsonMap['email'] as String,
+      body: jsonMap['body'] as String,
     );
   }
 
@@ -158,7 +164,7 @@ class Comment {
 
 /// Challenge 3: Data stream
 ///
-/// The following code allows you to stream content from the URL:
+/// The following code allows you to stream content from the given URL:
 ///
 /// ```none
 /// final url = Uri.parse('https://raywenderlich.com');
@@ -215,8 +221,8 @@ Future<void> challenge4() async {
 }
 
 void fibonacci(Map<String, Object> arguments) {
-  final SendPort sendPort = arguments['sendPort'];
-  final int n = arguments['n'];
+  final sendPort = arguments['sendPort'] as SendPort;
+  final n = arguments['n'] as int;
   var current = 1;
   var previous = 1;
   var done = 2;

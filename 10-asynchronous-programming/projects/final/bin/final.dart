@@ -94,7 +94,8 @@ Future<void> asynchronousNetwordRequest() async {
   try {
     final url = 'https://jsonplaceholder.typicode.com/todos/1';
     //final url = 'https://jsonplaceholder.typicode.com/todos/pink-elephants';
-    final response = await http.get(url);
+    final parsedUrl = Uri.parse(url);
+    final response = await http.get(parsedUrl);
     final statusCode = response.statusCode;
     if (statusCode == 200) {
       final rawJsonString = response.body;
@@ -115,14 +116,19 @@ Future<void> asynchronousNetwordRequest() async {
 }
 
 class Todo {
-  Todo({this.userId, this.id, this.title, this.completed});
+  Todo({
+    required this.userId,
+    required this.id,
+    required this.title,
+    required this.completed,
+  });
 
-  factory Todo.fromJson(Map<String, Object> jsonMap) {
+  factory Todo.fromJson(Map<String, Object?> jsonMap) {
     return Todo(
-      userId: jsonMap['userId'],
-      id: jsonMap['id'],
-      title: jsonMap['title'],
-      completed: jsonMap['completed'],
+      userId: jsonMap['userId'] as int,
+      id: jsonMap['id'] as int,
+      title: jsonMap['title'] as String,
+      completed: jsonMap['completed'] as bool,
     );
   }
 
@@ -198,11 +204,11 @@ Future<void> errorHandlingTryCatch() async {
 Future<void> cancellingStream() async {
   final file = File('assets/text_long.txt');
   final stream = file.openRead();
-  StreamSubscription<List<int>> subscription;
+  StreamSubscription<List<int>>? subscription;
   subscription = stream.listen(
     (data) {
       print(data.length);
-      subscription.cancel();
+      subscription?.cancel();
     },
     cancelOnError: true,
     onDone: () {
