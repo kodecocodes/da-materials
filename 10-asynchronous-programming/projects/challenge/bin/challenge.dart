@@ -166,7 +166,7 @@ class Comment {
 ///
 /// The following code allows you to stream content from the given URL:
 ///
-/// ```none
+/// ```
 /// final url = Uri.parse('https://raywenderlich.com');
 /// final client = http.Client();
 /// final request = http.Request('GET', url);

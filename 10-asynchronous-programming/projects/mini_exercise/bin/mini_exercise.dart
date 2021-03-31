@@ -31,7 +31,7 @@ Future<void> miniExercisesFutures() async {
 /// The following code produces a stream that outputs an integer every second
 /// and then stops after the tenth time.
 ///
-/// ```none
+/// ```
 /// Stream<int>.periodic(
 ///   Duration(seconds: 1),
 ///   (value) => value,

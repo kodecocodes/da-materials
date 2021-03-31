@@ -54,7 +54,7 @@ void main() {
 /// 
 /// Given the following class:
 /// 
-/// ```none
+/// ```
 /// class Password {
 ///   String value = '';
 /// }
