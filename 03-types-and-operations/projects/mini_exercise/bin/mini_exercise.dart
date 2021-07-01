@@ -49,6 +49,6 @@ void main() {
   /// For example, Ray Wenderlich's string would read: "Hello, my name is Ray
   /// Wenderlich."
 
-  const myDetails = 'Hello, my name is $firstName $lastName.';
+  const myDetails = 'Hello, my name is $fullName.';
   print(myDetails);
 }
