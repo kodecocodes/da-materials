@@ -75,7 +75,7 @@ class Address {
 
 class Email {
   Email(this.value);
-  final value;
+  final String value;
 }
 
 class MyClass {
