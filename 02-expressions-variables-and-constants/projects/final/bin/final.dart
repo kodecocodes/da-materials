@@ -1,11 +1,11 @@
-// Copyright (c) 2021 Razeware LLC
+// Copyright (c) 2022 Razeware LLC
 // For full license & permission details, see LICENSE.
 
 import 'dart:math';
 
 void main() {
   /// Comments
-  
+
   // This is a comment. It is not executed.
 
   // This is also a comment,
@@ -15,9 +15,9 @@ void main() {
   many...
   many lines. */
 
-  /* This is a comment. 
-  /* And inside it is 
-  another comment. */ 
+  /* This is a comment.
+  /* And inside it is
+  another comment. */
   Back to the first. */
 
   /// I am a documentation comment
@@ -30,19 +30,19 @@ void main() {
   // Command+click on a Mac, or Control+click on a PC, the [print] keyword.
   print('Hello, Dart!');
 
-  /// Printing out
+  /// Printing output
 
   print('Hello, Dart Apprentice reader!');
 
   /// Arithmetic operations
-  
+
   /// Simple operations
   print(2 + 6);
   print(10 - 2);
   print(2 * 4);
   print(24 / 3);
 
-  print(2+6);
+  print(2 + 6);
   print(2 + 6);
 
   /// Decimal numbers
@@ -66,7 +66,7 @@ void main() {
   print(max(sqrt(2), pi / 2));
 
   /// Naming data
-  
+
   /// Variables
   int number = 10;
   number = 15;
@@ -79,14 +79,14 @@ void main() {
   // myInteger = 3.14159; // No, no, no. That not allowed.
 
   num myNumber;
-  myNumber = 10;      // OK
+  myNumber = 10; // OK
   myNumber = 3.14159; // OK
   // myNumber = 'ten'; // No, no, no.
 
   dynamic myVariable;
-  myVariable = 10;      // OK
+  myVariable = 10; // OK
   myVariable = 3.14159; // OK
-  myVariable = 'ten';   // OK
+  myVariable = 'ten'; // OK
 
   /// Type inference
   var someNumber = 10;
