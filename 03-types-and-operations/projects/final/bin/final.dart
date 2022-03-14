@@ -23,7 +23,7 @@ void main() {
   print(myNumber.runtimeType);
 
   /// Type conversion
-  
+
   var integer = 100;
   var decimal = 12.5;
   // integer = decimal;

@@ -2,19 +2,19 @@
   "configVersion": 2,
   "packages": [
     {
-      "name": "pedantic",
-      "rootUri": "file:///Users/jonathan/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.0",
+      "name": "lints",
+      "rootUri": "file:///Users/suragch/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
-      "name": "starter_project",
+      "name": "starter",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.16"
     }
   ],
-  "generated": "2021-03-20T03:25:10.575071Z",
+  "generated": "2022-03-14T08:16:20.477794Z",
   "generator": "pub",
-  "generatorVersion": "2.12.2"
+  "generatorVersion": "2.16.1"
 }
