@@ -45,7 +45,7 @@ void main() {
 
   /// Challenge 1: Variable Dogs
   ///
-  /// Declare variable called `dogs` and set that equal to the number of dogs
+  /// Declare and `int` variable called `dogs` and set that equal to the number of dogs
   /// you own. Then imagine you bought a new puppy and increment the `dogs`
   /// variable by one.
 
@@ -64,7 +64,7 @@ void main() {
   /// print(age);
   /// ```
   ///
-  /// Modify the first line so that it compiles. Did you use `var`, `int`,
+  /// Modify the first line so that the code compiles. Did you use `var`, `int`,
   /// `final` or `const`?
 
   var age = 16;
@@ -84,7 +84,7 @@ void main() {
   /// const y = 10;
   /// ```
   ///
-  /// Work out what answer equals when you add the following lines of code:
+  /// Work out what each answer equals when you add the following lines of code to the code above:
   ///
   /// ```
   /// const answer1 = (x * 100) + y;
