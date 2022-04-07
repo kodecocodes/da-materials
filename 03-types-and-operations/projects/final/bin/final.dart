@@ -89,21 +89,14 @@ void main() {
 
   /// Concatenation
 
-  // var message = 'Hello' + ' my name is ';
-  // const name = 'Ray';
-  // message += name;
-  // print(message);
-
-  final message = StringBuffer();
-  message.write('Hello');
-  message.write(' my name is ');
-  message.write('Ray');
-  message.toString();
+  var message = 'Hello' + ' my name is ';
+  const name = 'Ray';
+  message += name;
   print(message);
 
   /// Interpolation
 
-  const name = 'Ray';
+  // const name = 'Ray';
   const introduction = 'Hello my name is $name';
   print(introduction);
 
