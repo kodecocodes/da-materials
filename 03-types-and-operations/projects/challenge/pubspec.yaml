@@ -8,6 +8,3 @@ environment:
 
 dev_dependencies:
   lints: ^1.0.0
-
-dependencies:
-  characters: ^1.2.0
