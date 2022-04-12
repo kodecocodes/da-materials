@@ -15,8 +15,8 @@ void main(List<String> arguments) {
 /// Function basics: Exercise 1
 ///
 /// Write a function named `youAreWonderful` with a string parameter
-/// called `name`. It returns a string using `name`, something like
-/// "You're wonderful, Bob."
+/// called `name`. It should return a string using `name`, and say something
+/// like "You're wonderful, Bob."
 void functionBasicsExercise1() {
   String youAreWonderful(String name) {
     return "You're wonderful, $name.";
@@ -41,7 +41,7 @@ void functionBasicsExercise2() {
 /// Function basics: Exercise 3
 ///
 ///  Make both inputs named parameters. Make `name` required and
-/// `numberPeople` have a default of `30`.
+///  set `numberPeople` to have a default of `30`.
 void functionBasicsExercise3() {
   String youAreWonderful({
     required String name,
@@ -68,7 +68,7 @@ void challenge1() {
   print(result);
 }
 
-/// Challenge 2: Prime time
+/// Challenge 2: Prime Time
 ///
 /// Write a function that checks if a number is prime.
 ///
@@ -112,18 +112,15 @@ void challenge1() {
 /// import 'dart:math';
 /// ```
 void challenge2() {
-  bool isNumberDivisible(int number, int divisor) {
-    return number % divisor == 0;
-  }
+  bool isNumberDivisible(int number, int divisor) => number % divisor == 0;
 
   bool isPrime(int number) {
-    var isPrime = true;
     for (var i = 2; i <= sqrt(number); i++) {
       if (isNumberDivisible(number, i)) {
-        isPrime = false;
+        return false;
       }
     }
-    return isPrime;
+    return true;
   }
 
   print(isPrime(6));
