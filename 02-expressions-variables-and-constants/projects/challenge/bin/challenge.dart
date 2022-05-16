@@ -45,7 +45,7 @@ void main() {
 
   /// Challenge 1: Variable Dogs
   ///
-  /// Declare and `int` variable called `dogs` and set that equal to the number of dogs
+  /// Declare an `int` variable called `dogs` and set that equal to the number of dogs
   /// you own. Then imagine you bought a new puppy and increment the `dogs`
   /// variable by one.
 
