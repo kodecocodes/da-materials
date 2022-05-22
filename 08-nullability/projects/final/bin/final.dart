@@ -86,7 +86,10 @@ void ifNullOperator() {
 
 void nullAwareAssignmentOperator() {
   double? fontSize;
-  fontSize = fontSize ?? 20.0;
+  // fontSize = fontSize ?? 20.0;
+  fontSize ??= 20.0;
+
+  print(fontSize);
 }
 
 void nullAwareAccess() {
