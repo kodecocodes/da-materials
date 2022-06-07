@@ -1,20 +1,56 @@
-// Copyright (c) 2021 Razeware LLC
+// Copyright (c) 2022 Razeware LLC
 // For full license & permission details, see LICENSE.
 
 import 'dart:math';
 
 void main() {
-  /// Challenge 1: Variables
+  /// Arithmetic operations exercise
   ///
-  /// Declare a constant called `myAge` and set it equal to your age.
-  /// Also declare variable called `dogs` and set that equal to the
-  /// number of dogs you own. Then imagine you bought a new puppy and increment
-  /// the `dogs` variable by one.
+  /// Print the value of `1` over the square root of `2`.
+  /// Confirm that it equals the sine of `45°`.
 
-  const myAge = 42;
+  // Remember to add the `dart:math` import at the top of the file.
+  print(sin(45 * pi / 180));
+  print(1 / sqrt(2));
+
+  /// Naming data: Exercise 1
+  ///
+  /// Declare a constant of type `int` called `ageMe` and set it to your age.
+
+  const myAge = 98;
+  print(myAge);
+
+  /// Naming data: Exercise 2
+  ///
+  /// Declare a variable of type `double` called `averageAge`. Initially, set
+  /// the variable to your own age. Then, set it to the average of your age and
+  /// your best friend's age.
+
+  double averageAge = 98;
+  averageAge = (98 + 27) / 2;
+  print(averageAge);
+
+  /// Naming data: Exercise 3
+  ///
+  /// Create a constant called `testNumber` and initialize it with whatever
+  /// integer you'd like. Next, create another constant called `evenOdd` and
+  /// set it equal to `testNumber` modulo `2`. Now change `testNumber` to
+  /// various numbers. What do you notice about `evenOdd`?
+
+  const testNumber = 42;
+  const evenOdd = testNumber % 2;
+  print(evenOdd);
+  // `evenOdd` is 0 if `testNumber` is even.
+  // `evenOdd` is 1 if `testNumber` is odd.
+
+  /// Challenge 1: Variable Dogs
+  ///
+  /// Declare an `int` variable called `dogs` and set that equal to the number of dogs
+  /// you own. Then imagine you bought a new puppy and increment the `dogs`
+  /// variable by one.
+
   var dogs = 101;
   dogs++;
-  print(myAge);
   print(dogs);
 
   /// Challenge 2: Make it compile
@@ -28,7 +64,7 @@ void main() {
   /// print(age);
   /// ```
   ///
-  /// Modify the first line so that it compiles. Did you use `var`, `int`,
+  /// Modify the first line so that the code compiles. Did you use `var`, `int`,
   /// `final` or `const`?
 
   var age = 16;
@@ -48,7 +84,7 @@ void main() {
   /// const y = 10;
   /// ```
   ///
-  /// Work out what answer equals when you add the following lines of code:
+  /// Work out what each answer equals when you add the following lines of code to the code above:
   ///
   /// ```
   /// const answer1 = (x * 100) + y;
