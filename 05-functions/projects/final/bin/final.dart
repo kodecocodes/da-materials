@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Razeware LLC
+// Copyright (c) 2022 Razeware LLC
 // For full license & permission details, see LICENSE.
 
 /// Since this lesson is about functions, the source code also
@@ -22,16 +22,7 @@ void main() {
   makingNamedParametersRequired();
   avoidingSideEffects();
   optionalTypes();
-
-  assigningFunctionsToVariables();
-  usingAnonymousFunctions();
-  returningAFunction();
-  anonymousFunctionsInForEachLoops();
-  closuresAndScope();
-
-  arrowFunctionRefactoringExample1();
-  arrowFunctionRefactoringExample2();
-  arrowFunctionRefactoringExample3();
+  arrowFunctions();
 }
 
 void anatomyOfDartFunction() {
@@ -99,6 +90,7 @@ void makingNamedParametersRequired() {
     return min <= value && value <= max;
   }
 
+  print(withinTolerance(value: 9, min: 7, max: 11));
   // print(withinTolerance());
   print(withinTolerance(value: 9));
 }
@@ -141,119 +133,19 @@ void optionalTypes() {
   // }
 }
 
-void assigningFunctionsToVariables() {
-  int number = 4;
-  String greeting = 'hello';
-  bool isHungry = true;
-  Function multiply = (int a, int b) {
-    return a * b;
-  };
-
-  // Function myFunction = int multiply(int a, int b) {
-  //   return a * b;
-  // };
-}
-
-void usingAnonymousFunctions() {
-  final multiply = (int a, int b) {
-    return a * b;
-  };
-  print(multiply(2, 3));
-}
-
-void returningAFunction() {
-  Function applyMultiplier(num multiplier) {
-    return (num value) {
-      return value * multiplier;
-    };
-  }
-
-  final triple = applyMultiplier(3);
-  print(triple(6));
-  print(triple(14.0));
-}
-
-void anonymousFunctionsInForEachLoops() {
-  const numbers = [1, 2, 3];
-  numbers.forEach((number) {
-    final tripled = number * 3;
-    print(tripled);
-  });
-
-  // You can also define the function separately and pass it in
-  // directly to `forEach()`.
-  final triple = (int number) {
-    final tripled = number * 3;
-    print(tripled);
-  };
-  numbers.forEach(triple);
-}
-
-void closuresAndScope() {
-  var counter = 0;
-  final incrementCounter = () {
-    counter += 1;
-  };
-
-  incrementCounter();
-  incrementCounter();
-  incrementCounter();
-  incrementCounter();
-  incrementCounter();
-  print(counter);
-
-  Function countingFunction() {
-    var counter = 0;
-    final incrementCounter = () {
-      counter += 1;
-      return counter;
-    };
-    return incrementCounter;
-  }
-
-  final counter1 = countingFunction();
-  final counter2 = countingFunction();
-
-  print(counter1());
-  print(counter2());
-  print(counter1());
-  print(counter1());
-  print(counter2());
-}
-
-void arrowFunctionRefactoringExample1() {
-  // final multiply = (int a, int b) {
-  //   return a * b;
-  // };
-
-  final multiply = (int a, int b) => a * b;
-
-  print(multiply(2, 3));
-}
-
-void arrowFunctionRefactoringExample2() {
-  // Function applyMultiplier(num multiplier) {
-  //   return (num value) {
-  //     return value * multiplier;
-  //   };
+void arrowFunctions() {
+  // int add(int a, int b) {
+  //   return a + b;
   // }
 
-  Function applyMultiplier(num multiplier) {
-    return (num value) => value * multiplier;
-  }
+  int add(int a, int b) => a + b;
+  print(add(2, 3));
 
-  final triple = applyMultiplier(3);
-  print(triple(6));
-  print(triple(14.0));
-}
+  // void printTripled(int number) {
+  //   final tripled = number * 3;
+  //   print(tripled);
+  // }
 
-void arrowFunctionRefactoringExample3() {
-  const numbers = [1, 2, 3];
-
-  numbers.forEach((number) {
-    final tripled = number * 3;
-    print(tripled);
-  });
-
-  numbers.forEach((number) => print(number * 3));
+  void printTripled(int number) => print(number * 3);
+  printTripled(4);
 }
