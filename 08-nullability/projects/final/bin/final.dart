@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Razeware LLC
+// Copyright (c) 2022 Razeware LLC
 // For full license & permission details, see LICENSE.
 
 void main() {
@@ -15,7 +15,6 @@ void main() {
   nullAwareAccess();
   nullAssertionOperator();
   nullAwareCascadeOperator();
-  nullAwareIndexOperator();
   nullableInstanceVariables();
   lateKeyword();
 }
@@ -33,7 +32,7 @@ void problemWithNull() {
 
   print(isPositive(3));
   print(isPositive(-1));
-  // print(isPositive(null));
+  //print(isPositive(null));
 }
 
 void nullableVsNonNullable() {
@@ -87,7 +86,10 @@ void ifNullOperator() {
 
 void nullAwareAssignmentOperator() {
   double? fontSize;
-  fontSize = fontSize ?? 20.0;
+  // fontSize = fontSize ?? 20.0;
+  fontSize ??= 20.0;
+
+  print(fontSize);
 }
 
 void nullAwareAccess() {
@@ -130,13 +132,6 @@ void nullAwareCascadeOperator() {
 //   String? name;
 //   int? id;
 // }
-
-void nullAwareIndexOperator() {
-  List<int>? myList = [1, 2, 3];
-  myList = null;
-  int? myItem = myList?[2];
-  print(myItem);
-}
 
 void initializingNonNullableClassFields() {
   // final user = User(name: null);
@@ -237,6 +232,7 @@ void lateKeyword() {
 // class User {
 //   late String name;
 // }
+
 class SomeClass {
   late String? value = doHeavyCalculation();
   String? doHeavyCalculation() {

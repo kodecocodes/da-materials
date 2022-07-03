@@ -1,43 +1,58 @@
-// Copyright (c) 2021 Razeware LLC
+// Copyright (c) 2022 Razeware LLC
 // For full license & permission details, see LICENSE.
 
-import 'dart:math';
-
 void main() {
+  nullOverviewExercise1();
+  nullOverviewExercise2();
+  nullOverviewExercise3();
+
   challenge1();
-  challenge2();
 }
 
+/// Null overview: Exercise 1
+///
+/// Create a `String?` variable called `profession`, but don't give it a value.
+/// Then you'll have `profession` `null`. Get it? Professional? :]
+void nullOverviewExercise1() {
+  String? profession;
+  print(profession);
+}
+
+/// Null overview: Exercise 2
+///
+/// Give `profession` a value of "basketball player".
+void nullOverviewExercise2() {
+  String? profession;
+  profession = 'basketball player';
+  print(profession);
+}
+
+/// Null overview: Exercise 3
+///
+/// Write the following line and then hover your cursor over the variable
+/// name. What type does Dart infer `iLove` to be? `String` or `String?`?
+///
+/// ```
+/// const iLove = 'Dart';
+/// ```
+void nullOverviewExercise3() {
+  const iLove = 'Dart';
+  print(iLove.runtimeType);
+  // `iLove` is of type String (non-nullable).
+}
+
+/// Challenge 1: Naming customs
+///
+/// People around the world have different customs for giving names to
+/// children. It would be difficult to create a data class to accurately
+/// represent them all, but try it like this:
+///
+/// - Create a class called `Name` with `givenName` and `surname` properties.
+/// - Some people write the surname last and some write it first. Add a
+///   Boolean property called `surnameIsFirst` to keep track of this.
+/// - Not everyone in the world has a surname.
+/// - Add a `toString` method that prints the full name.
 void challenge1() {
-  /// Challenge 1: Random nothings
-  ///
-  /// Write a function that randomly returns `42` or `null`. Assign
-  /// the return value of the function to an variable named `result` that
-  /// will never be `null`. Give `result` a default of `0` if the function
-  /// returns `null`.
-
-  int? randomNothing() {
-    final isTrue = Random().nextBool();
-    return (isTrue) ? 42 : null;
-  }
-
-  final result = randomNothing() ?? 0;
-  print(result);
-}
-
-void challenge2() {
-  /// Challenge 2: Naming customs
-  ///
-  /// People around the world have different customs for giving names to
-  /// children. It would be difficult to create a data class to accurately
-  /// represent them all, but try it like this:
-  ///
-  /// - Create a class called `Name` with `givenName` and `surname` properties.
-  /// - Some people write the surname last and some write it first. Add a 
-  ///   Boolean property called `surnameIsFirst` to keep track of this.
-  /// - Not everyone in the world has a surname.
-  /// - Add a `toString` method that prints the full name.
-
   final ray = Name(givenName: 'Ray', surname: 'Wenderlich');
   final liMing = Name(surname: 'Li', givenName: 'Ming', surnameIsFirst: true);
   final baatar = Name(givenName: 'Baatar');
